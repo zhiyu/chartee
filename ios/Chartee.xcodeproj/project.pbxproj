@@ -15,17 +15,13 @@
 		2899E5220DE3E06400AC0155 /* CharteeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* CharteeViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* CharteeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CharteeViewController.m */; };
-		5AEF7F6713CFD50A00223427 /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F5F13CFD50A00223427 /* YAxis.m */; };
-		5AEF7F6813CFD50A00223427 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F6113CFD50A00223427 /* Section.m */; };
-		5AEF7F6913CFD50A00223427 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F6313CFD50A00223427 /* Chart.m */; };
-		5AEF7F6A13CFD50A00223427 /* CandleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F6513CFD50A00223427 /* CandleChart.m */; };
+		5ADE6B0513CFD7680007054D /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6AFD13CFD7680007054D /* YAxis.m */; };
+		5ADE6B0613CFD7680007054D /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6AFF13CFD7680007054D /* Section.m */; };
+		5ADE6B0713CFD7680007054D /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0113CFD7680007054D /* Chart.m */; };
+		5ADE6B0813CFD7680007054D /* CandleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0313CFD7680007054D /* CandleChart.m */; };
 		5AEF7FAB13CFD60300223427 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		5AEF7FAC13CFD60300223427 /* CharteeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CharteeAppDelegate.m */; };
 		5AEF7FAD13CFD60300223427 /* CharteeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CharteeViewController.m */; };
-		5AEF7FAE13CFD60300223427 /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F5F13CFD50A00223427 /* YAxis.m */; };
-		5AEF7FAF13CFD60300223427 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F6113CFD50A00223427 /* Section.m */; };
-		5AEF7FB013CFD60300223427 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F6313CFD50A00223427 /* Chart.m */; };
-		5AEF7FB113CFD60300223427 /* CandleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEF7F6513CFD50A00223427 /* CandleChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,15 +37,15 @@
 		28D7ACF70DDB3853001CB0EB /* CharteeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharteeViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Chartee_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartee_Prefix.pch; sourceTree = "<group>"; };
-		5AEF7F5F13CFD50A00223427 /* YAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAxis.m; sourceTree = "<group>"; };
-		5AEF7F6013CFD50A00223427 /* YAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAxis.h; sourceTree = "<group>"; };
-		5AEF7F6113CFD50A00223427 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
-		5AEF7F6213CFD50A00223427 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
-		5AEF7F6313CFD50A00223427 /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
-		5AEF7F6413CFD50A00223427 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
-		5AEF7F6513CFD50A00223427 /* CandleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandleChart.m; sourceTree = "<group>"; };
-		5AEF7F6613CFD50A00223427 /* CandleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandleChart.h; sourceTree = "<group>"; };
-		5AEF7FA813CFD5FB00223427 /* libchartee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libchartee.a; path = "build/Debug-iphonesimulator/libchartee.a"; sourceTree = "<group>"; };
+		5ADE6AFD13CFD7680007054D /* YAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAxis.m; path = chartee/YAxis.m; sourceTree = "<group>"; };
+		5ADE6AFE13CFD7680007054D /* YAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAxis.h; path = chartee/YAxis.h; sourceTree = "<group>"; };
+		5ADE6AFF13CFD7680007054D /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Section.m; path = chartee/Section.m; sourceTree = "<group>"; };
+		5ADE6B0013CFD7680007054D /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Section.h; path = chartee/Section.h; sourceTree = "<group>"; };
+		5ADE6B0113CFD7680007054D /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chart.m; path = chartee/Chart.m; sourceTree = "<group>"; };
+		5ADE6B0213CFD7680007054D /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chart.h; path = chartee/Chart.h; sourceTree = "<group>"; };
+		5ADE6B0313CFD7680007054D /* CandleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CandleChart.m; path = chartee/CandleChart.m; sourceTree = "<group>"; };
+		5ADE6B0413CFD7680007054D /* CandleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CandleChart.h; path = chartee/CandleChart.h; sourceTree = "<group>"; };
+		5AEF7FA813CFD5FB00223427 /* libchartee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libchartee.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1107310486CEB800E47090 /* Chartee-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chartee-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,14 +135,14 @@
 		5AEF7F5C13CFD4FE00223427 /* chartee */ = {
 			isa = PBXGroup;
 			children = (
-				5AEF7F5F13CFD50A00223427 /* YAxis.m */,
-				5AEF7F6013CFD50A00223427 /* YAxis.h */,
-				5AEF7F6113CFD50A00223427 /* Section.m */,
-				5AEF7F6213CFD50A00223427 /* Section.h */,
-				5AEF7F6313CFD50A00223427 /* Chart.m */,
-				5AEF7F6413CFD50A00223427 /* Chart.h */,
-				5AEF7F6513CFD50A00223427 /* CandleChart.m */,
-				5AEF7F6613CFD50A00223427 /* CandleChart.h */,
+				5ADE6AFD13CFD7680007054D /* YAxis.m */,
+				5ADE6AFE13CFD7680007054D /* YAxis.h */,
+				5ADE6AFF13CFD7680007054D /* Section.m */,
+				5ADE6B0013CFD7680007054D /* Section.h */,
+				5ADE6B0113CFD7680007054D /* Chart.m */,
+				5ADE6B0213CFD7680007054D /* Chart.h */,
+				5ADE6B0313CFD7680007054D /* CandleChart.m */,
+				5ADE6B0413CFD7680007054D /* CandleChart.h */,
 			);
 			name = chartee;
 			sourceTree = "<group>";
@@ -243,10 +239,10 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* CharteeAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* CharteeViewController.m in Sources */,
-				5AEF7F6713CFD50A00223427 /* YAxis.m in Sources */,
-				5AEF7F6813CFD50A00223427 /* Section.m in Sources */,
-				5AEF7F6913CFD50A00223427 /* Chart.m in Sources */,
-				5AEF7F6A13CFD50A00223427 /* CandleChart.m in Sources */,
+				5ADE6B0513CFD7680007054D /* YAxis.m in Sources */,
+				5ADE6B0613CFD7680007054D /* Section.m in Sources */,
+				5ADE6B0713CFD7680007054D /* Chart.m in Sources */,
+				5ADE6B0813CFD7680007054D /* CandleChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +253,6 @@
 				5AEF7FAB13CFD60300223427 /* main.m in Sources */,
 				5AEF7FAC13CFD60300223427 /* CharteeAppDelegate.m in Sources */,
 				5AEF7FAD13CFD60300223427 /* CharteeViewController.m in Sources */,
-				5AEF7FAE13CFD60300223427 /* YAxis.m in Sources */,
-				5AEF7FAF13CFD60300223427 /* Section.m in Sources */,
-				5AEF7FB013CFD60300223427 /* Chart.m in Sources */,
-				5AEF7FB113CFD60300223427 /* CandleChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
