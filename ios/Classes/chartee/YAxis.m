@@ -1,9 +1,9 @@
 //
 //  YAxis.m
-//  tzz
+//  https://github.com/zhiyu/chartee/
 //
-//  Created by zzy on 7/11/11.
-//  Copyright 2011 Zhengzhiyu. All rights reserved.
+//  Created by zhiyu on 7/11/11.
+//  Copyright 2011 zhiyu. All rights reserved.
 //
 
 #import "YAxis.h"
