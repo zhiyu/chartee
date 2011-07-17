@@ -8,6 +8,8 @@
 
 #import "Chart.h"
 
+#define MIN_INTERVAL  3
+
 @implementation Chart
 
 @synthesize enableSelection; 
@@ -96,23 +98,7 @@
 	
 	YAxis *yaxis = [[[self.sections objectAtIndex:[section intValue]] yAxises] objectAtIndex:[yAxis intValue]];
 	
-	if([type isEqual:@"candle"]){
-		if(![yaxis isInitialized]){
-			float high = [[[data objectAtIndex:0] objectAtIndex:2] floatValue];
-			float low = [[[data objectAtIndex:0] objectAtIndex:3] floatValue];
-		    [yaxis setMax:high];
-			[yaxis setMin:low];
-			[yaxis setIsInitialized:YES];
-		}
-		for(int i=self.rangeFrom;i<self.rangeTo;i++){
-			float high = [[[data objectAtIndex:i] objectAtIndex:2] floatValue];
-			float low = [[[data objectAtIndex:i] objectAtIndex:3] floatValue];
-			if(high > [yaxis max])
-				[yaxis setMax:high];
-			if(low < [yaxis min])
-				[yaxis setMin:low];
-		}
-	}else if([type isEqual:@"column"]){
+	if([type isEqual:@"column"]){
 		if(![yaxis isInitialized]){
 			float value = [[[data objectAtIndex:0] objectAtIndex:0] floatValue];
 		    [yaxis setMax:value];
@@ -159,6 +145,8 @@
 }
 
 -(void)drawChart{
+	
+	
 	NSMutableArray  *labels = [[NSMutableArray alloc] init];
 	for(int secIndex=0;secIndex<self.sections.count;secIndex++){
 		NSMutableArray *label  = [[NSMutableArray alloc] init];
@@ -240,82 +228,7 @@
 	
 	Section *sec = [self.sections objectAtIndex:section];
 	
-	if([type isEqual:@"candle"]){
-		
-		for(int i=self.rangeFrom;i<self.rangeTo;i++){
-			float high  = [[[data objectAtIndex:i] objectAtIndex:2] floatValue];
-			float low   = [[[data objectAtIndex:i] objectAtIndex:3] floatValue];
-			float open  = [[[data objectAtIndex:i] objectAtIndex:0] floatValue];
-			float close = [[[data objectAtIndex:i] objectAtIndex:1] floatValue];
-			
-			float ix  = sec.paddingLeft+(i-self.rangeFrom)*plotWidth;
-			float iNx = sec.paddingLeft+(i+1-self.rangeFrom)*plotWidth;
-			float iyo = [self getLocalY:open withSection:section withAxis:yAxis];
-			float iyc = [self getLocalY:close withSection:section withAxis:yAxis];
-			float iyh = [self getLocalY:high withSection:section withAxis:yAxis];
-			float iyl = [self getLocalY:low withSection:section withAxis:yAxis];
-			
-			if(i == self.selectedIndex){
-				NSMutableDictionary *lbl = [[NSMutableDictionary alloc] init];
-				NSMutableString *l = [[NSMutableString alloc] init];
-				[l appendFormat:@"开盘:%.2f",open];
-				[l appendFormat:@"收盘:%.2f",close];
-				[l appendFormat:@"最高:%.2f",high];
-				[l appendFormat:@"最低:%.2f ",low];
-				[lbl setObject:l forKey:@"text"];
-				[l release];
-				
-				
-				NSMutableString *clr = [[NSMutableString alloc] init];
-				[clr appendFormat:@"%f,",R];
-				[clr appendFormat:@"%f,",G];
-				[clr appendFormat:@"%f",B];
-				[lbl setObject:clr forKey:@"color"];
-				[clr release];
-
-				[[labels objectAtIndex:section] addObject:lbl];
-				[lbl release];
-			}
-			
-			if(close == open){
-				if(i == self.selectedIndex){
-					CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:SR green:SG blue:SB alpha:1.0].CGColor);
-				}else{
-					CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:R green:G blue:B alpha:1.0].CGColor);
-				}
-				CGContextMoveToPoint(context, ix+plotPadding, iyo);
-				CGContextAddLineToPoint(context, iNx-plotPadding,iyo);
-				CGContextStrokePath(context);
-				
-			}else{
-				if(close < open){
-					if(i == self.selectedIndex){
-						CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:NSR green:NSG blue:NSB alpha:1.0].CGColor);
-						CGContextSetRGBFillColor(context, NSR, NSG, NSB, 1.0); 
-					}else{
-						CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:NR green:NG blue:NB alpha:1.0].CGColor);
-						CGContextSetRGBFillColor(context, NR, NG, NB, 1.0); 
-					}
-				}else{
-					if(i == self.selectedIndex){
-						CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:SR green:SG blue:SB alpha:1.0].CGColor);
-						CGContextSetRGBFillColor(context, SR, SG, SB, 1.0); 
-					}else{
-						CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:R green:G blue:B alpha:1.0].CGColor);
-						CGContextSetRGBFillColor(context, R, G, B, 1.0); 
-					} 
-				}				
-				if(close < open){
-					CGContextFillRect (context, CGRectMake (ix+plotPadding, iyo, plotWidth-2*plotPadding,iyc-iyo)); 
-				}else{
-					CGContextFillRect (context, CGRectMake (ix+plotPadding, iyc, plotWidth-2*plotPadding, iyo-iyc)); 
-				}
-			}
-			CGContextMoveToPoint(context, ix+plotWidth/2, iyh);
-			CGContextAddLineToPoint(context,ix+plotWidth/2,iyl);
-			CGContextStrokePath(context);
-		}
-	}else if([type isEqual:@"column"]){
+	if([type isEqual:@"column"]){
 		for(int i=self.rangeFrom;i<self.rangeTo;i++){
 			float value = [[[data objectAtIndex:i] objectAtIndex:0] floatValue];
 			
@@ -638,6 +551,9 @@
  */
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
+	
+	self.backgroundColor    = [[UIColor alloc] initWithRed:0.15 green:0.15 blue:0.15 alpha:1.0];
+	
     if (self) {
 		self.enableSelection = YES;
 		self.isInitialized   = NO;
@@ -684,6 +600,106 @@
 	[title release];
 	[sections release];
 	[ratios release];
+}
+
+#pragma mark -
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	NSArray *ts = [touches allObjects];
+	self.touchFlag = 0;
+	if([ts count]==1){
+		UITouch* touch = [ts objectAtIndex:0];
+		if([touch locationInView:self].x < 40){
+		    self.touchFlag = [touch locationInView:self].y;
+		}
+	}else if ([ts count]==2) {
+		self.touchFlag = abs([[ts objectAtIndex:0] locationInView:self].x-[[ts objectAtIndex:1] locationInView:self].x);
+	}
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+	NSArray *ts = [touches allObjects];	
+	if([ts count]==1){
+		UITouch* touch = [ts objectAtIndex:0];
+		
+		if([touch locationInView:self].x > 40)
+			[self setSelectedIndexByPoint:[touch locationInView:self]];
+		
+		if([touch locationInView:self].x < 40){
+			if(abs([touch locationInView:self].y - self.touchFlag) >= MIN_INTERVAL){
+				if([touch locationInView:self].y - self.touchFlag > 0){
+					if(self.rangeFrom - 1 >= 0){
+						self.rangeFrom -= 1;
+						self.rangeTo   -= 1;
+						
+						if(self.selectedIndex >= self.rangeTo){
+						    self.selectedIndex = self.rangeTo-1;
+						}
+						[self setNeedsDisplay];
+					}
+				}else{
+					if(self.rangeTo + 1 <= self.plotCount){
+						self.rangeFrom += 1;
+						self.rangeTo += 1;
+						
+						if(self.selectedIndex < self.rangeFrom){
+						    self.selectedIndex = self.rangeFrom;
+						}
+						[self setNeedsDisplay];
+					}
+				}
+				self.touchFlag = [touch locationInView:self].y;
+			}
+		}
+	}else if ([ts count]==2) {
+		float currFlag = abs([[ts objectAtIndex:0] locationInView:self].x-[[ts objectAtIndex:1] locationInView:self].x);
+		if(self.touchFlag == 0){
+		    self.touchFlag = currFlag;
+		}else{
+			if(abs(currFlag-self.touchFlag) >= MIN_INTERVAL){
+				if(currFlag-self.touchFlag > 0){
+					if(self.rangeFrom + 1 < self.rangeTo){
+						self.rangeFrom += 1;
+					}
+					if(self.rangeTo - 1 > self.rangeFrom){
+						self.rangeTo -= 1;
+					}
+					[self setNeedsDisplay];
+				}else{
+					if(self.rangeFrom - 1 >= 0){
+						self.rangeFrom -= 1;
+					}
+					if(self.rangeTo + 1 <= self.plotCount){
+						self.rangeTo += 1;
+					}
+					[self setNeedsDisplay];
+				}
+				self.touchFlag = currFlag;				
+			}
+		}
+		self.touchFlag = currFlag;
+	}
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+	NSArray *ts = [touches allObjects];	
+	UITouch* touch = [[event allTouches] anyObject];
+	if([ts count]==1){
+		if([touch locationInView:self].x > 40){
+			int i = [self getSectionIndexByPoint:[touch locationInView:self]];
+			
+			if(i!=-1){
+				Section *sec = [self.sections objectAtIndex:i];
+				if(sec.paging){
+					[sec nextPage];
+					[self setNeedsDisplay];
+				}else{
+					[self setSelectedIndexByPoint:[touch locationInView:self]];
+				}
+			}
+			
+		}
+	}
+	self.touchFlag = 0;
 }
 
 @end

@@ -1,0 +1,46 @@
+TAll
+v7
+r0
+t332569601.278364
+cCheck dependencies
+cProcessInfoPlistFile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app/Info.plist All-Info.plist
+cTouch /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app
+t1310876801
+s136
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app/Info.plist
+t1310876801
+s490
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app/PkgInfo
+t1310876801
+s8
+
+NAll-Info.plist
+c000000004E22647000000000000002B1
+t1310876784
+s689
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies332569601#332569601#0(0"0(0#1#0"8661760736#0"0#
+
+CProcessInfoPlistFile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app/Info.plist All-Info.plist
+s332569601.271885
+e332569601.275304
+r1
+xProcessInfoPlistFile
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app/Info.plist
+xAll-Info.plist
+lSLF07#2@22"Process All-Info.plist332569601#332569601#0(0"0(0#0#41"/Users/zzy/git/chartee/ios/All-Info.plist8660394816#435"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility All-Info.plist -genpkginfo /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app/Info.plist0#
+
+CTouch /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app
+s332569601.275387
+e332569601.278153
+r1
+xTouch
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app
+lSLF07#2@70"Touch /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app332569601#332569601#0(0"0(0#0#0"8650526208#252"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/All.app0#
+

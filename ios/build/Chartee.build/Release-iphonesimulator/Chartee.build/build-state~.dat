@@ -1,0 +1,652 @@
+Tchartee
+v7
+r0
+t332569554.168504
+cCheck dependencies
+cProcessInfoPlistFile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Info.plist Chartee-Info.plist
+cCpResource build/Release-iphonesimulator/Chartee.app/YAxis.h Classes/chartee/YAxis.h
+cCpResource build/Release-iphonesimulator/Chartee.app/Section.h Classes/chartee/Section.h
+cCpResource build/Release-iphonesimulator/Chartee.app/Chart.h Classes/chartee/Chart.h
+cCompileXIB /Users/zzy/git/chartee/ios/MainWindow.xib
+cCompileXIB /Users/zzy/git/chartee/ios/CharteeViewController.xib
+cProcessPCH /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch.gch Chartee_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/main.o /Users/zzy/git/chartee/ios/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeAppDelegate.o /Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeViewController.o /Users/zzy/git/chartee/ios/Classes/CharteeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/YAxis.o /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Section.o /Users/zzy/git/chartee/ios/Classes/chartee/Section.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Chart.o /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee normal i386
+cGenerateDSYMFile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app.dSYM /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee
+cTouch /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c000000004CC121B1000000000023EAC0
+t1287725489
+s2353856
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Users/zzy/git/chartee/ios/CharteeViewController.xib
+c000000004E1F9D710000000000001A45
+t1310694769
+s6725
+
+N/Users/zzy/git/chartee/ios/Chartee_Prefix.pch
+c000000004E1F9D7100000000000000B7
+t1310694769
+s183
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.h
+c000000004E1FA2A200000000000001E6
+t1310696098
+s486
+i<UIKit/UIKit.h>
+
+N/Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.m
+c000000004E1FA2A80000000000000ABB
+t1310696104
+s2747
+i"CharteeAppDelegate.h"
+i"CharteeViewController.h"
+
+N/Users/zzy/git/chartee/ios/Classes/CharteeViewController.h
+c000000004E2260090000000000000144
+t1310875657
+s324
+i<UIKit/UIKit.h>
+i"Chart.h"
+
+N/Users/zzy/git/chartee/ios/Classes/CharteeViewController.m
+c000000004E2260610000000000002689
+t1310875745
+s9865
+i"CharteeViewController.h"
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.h
+c000000004E1FA29D00000000000000E7
+t1310696093
+s231
+i<UIKit/UIKit.h>
+i"Chart.h"
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m
+c000000004E225D010000000000002685
+t1310874881
+s9861
+i"CandleChart.h"
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/Chart.h
+c000000004E1FA286000000000000098C
+t1310696070
+s2444
+i<UIKit/UIKit.h>
+i"YAxis.h"
+i"Section.h"
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m
+c000000004E2264270000000000005E0C
+t1310876711
+s24076
+i"Chart.h"
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/Section.h
+c000000004E1FA27F00000000000004A1
+t1310696063
+s1185
+i<Foundation/Foundation.h>
+i"YAxis.h"
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/Section.m
+c000000004E1FA27D0000000000000717
+t1310696061
+s1815
+i"Section.h"
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.h
+c000000004E224B48000000000000026B
+t1310870344
+s619
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m
+c000000004E1FA2740000000000000235
+t1310696052
+s565
+i"YAxis.h"
+
+N/Users/zzy/git/chartee/ios/MainWindow.xib
+c000000004E1F9D710000000000004E29
+t1310694769
+s20009
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CandleChart.o
+t1310869626
+s50144
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Chart.o
+t1310876754
+s111928
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Chartee.LinkFileList
+c000000004E22644F00000000000002C4
+t1310876751
+s708
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeAppDelegate.o
+t1310876752
+s51948
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeViewController.o
+t1310876753
+s60016
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Section.o
+t1310876753
+s24104
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/YAxis.o
+t1310876752
+s13620
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/main.o
+t1310876752
+s6264
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart-786763499471166C.o
+t1310870596
+s51272
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart.o
+t1310874998
+s65720
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart-8764A4F53180F66A.o
+t1310870597
+s118132
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart.o
+t1310876346
+s111996
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section-8E35C46A072AA94.o
+t1310870596
+s25248
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section.o
+t1310875533
+s24104
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis-17E09DF23D828A92.o
+t1310870595
+s14024
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis.o
+t1310875533
+s13620
+
+N/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/chartee.LinkFileList
+c000000004E2263030000000000000155
+t1310876419
+s341
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app
+t1310876754
+s340
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app.dSYM
+t1310876754
+s102
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/CandleChart.h
+t1310869624
+s231
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chart.h
+t1310876751
+s2444
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee
+t1310876754
+s77552
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/CharteeViewController.nib
+t1310876752
+s795
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Info.plist
+t1310876751
+s591
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/MainWindow.nib
+t1310876752
+s1123
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/PkgInfo
+t1310876751
+s8
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Section.h
+t1310876751
+s1185
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/YAxis.h
+t1310876751
+s619
+
+N/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/libchartee.a
+t1310876485
+s151960
+
+N/Users/zzy/git/chartee/ios/main.m
+c000000004E1FA2BC0000000000000170
+t1310696124
+s368
+i<UIKit/UIKit.h>
+
+N/var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch.gch
+t1310869625
+s15113424
+
+NChartee-Info.plist
+c000000004E1F9D71000000000000038D
+t1310694769
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies332569551#332569552#0(0"0(0#1#0"8648445600#0"0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CandleChart.o /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332562426.054911
+e332562426.262110
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CandleChart.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m332562426#332562426#0(0"0(0#0#56"/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m8628259584#1871"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch -c /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CandleChart.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Chart.o /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332569553.126505
+e332569554.109955
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Chart.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart initYAxis]':
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: (Messages without a matching method signature
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: will be assumed to return 'id' and accept
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: '...' as arguments.)
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:80: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:83: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:87: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart drawChart]':
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:164: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:164: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:165: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:168: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:174: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:174: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:175: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:178: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type
+lSLF07#2@58"Compile /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569553#332569554#0(2369"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart initYAxis]':/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: (Messages without a matching method signature/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: will be assumed to return 'id' and accept/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: '...' as arguments.)/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:79: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:80: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:83: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:87: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart drawChart]':/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:164: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:164: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:165: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:168: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:174: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:174: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:175: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:178: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type14(22@38"'NSObject' may not respond to '-count'332569553#86#103#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#79#0#79#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)332569553#189#110#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#79#0#79#0#0"0(22@38"Comparison between pointer and integer332569553#490#103#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#79#0#79#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332569553#593#112#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#80#0#80#0#26"'*' may not respond to '*'0(22@164"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type332569553#705#229#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#83#0#83#0#0"0(22@164"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type332569553#934#229#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#87#0#87#0#0"0(22@38"'NSObject' may not respond to '-count'332569553#1249#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#164#0#164#0#26"'*' may not respond to '*'0(22@38"Comparison between pointer and integer332569553#1353#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#164#0#164#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332569553#1457#113#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#165#0#165#0#26"'*' may not respond to '*'0(22@173"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type332569553#1570#239#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#168#0#168#0#0"0(22@38"'NSObject' may not respond to '-count'332569553#1809#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#174#0#174#0#26"'*' may not respond to '*'0(22@38"Comparison between pointer and integer332569553#1913#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#174#0#174#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332569553#2017#113#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#175#0#175#0#26"'*' may not respond to '*'0(22@173"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type332569553#2130#239#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332569511#178#0#178#0#0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m8662369440#1859"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch -c /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Chart.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeAppDelegate.o /Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332569552.509742
+e332569552.705563
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeAppDelegate.o
+x/Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.m332569552#332569552#0(0"0(0#0#55"/Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.m8652817440#1877"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch -c /Users/zzy/git/chartee/ios/Classes/CharteeAppDelegate.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeAppDelegate.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeViewController.o /Users/zzy/git/chartee/ios/Classes/CharteeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332569552.580476
+e332569553.222194
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeViewController.o
+x/Users/zzy/git/chartee/ios/Classes/CharteeViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/zzy/git/chartee/ios/Classes/CharteeViewController.m332569552#332569553#0(0"0(0#0#58"/Users/zzy/git/chartee/ios/Classes/CharteeViewController.m8649920192#1883"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch -c /Users/zzy/git/chartee/ios/Classes/CharteeViewController.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/CharteeViewController.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Section.o /Users/zzy/git/chartee/ios/Classes/chartee/Section.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332569552.872865
+e332569553.126395
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Section.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/Section.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/zzy/git/chartee/ios/Classes/chartee/Section.m332569552#332569553#0(0"0(0#0#52"/Users/zzy/git/chartee/ios/Classes/chartee/Section.m8663402880#1863"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch -c /Users/zzy/git/chartee/ios/Classes/chartee/Section.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Section.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/YAxis.o /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332569552.705666
+e332569552.872767
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/YAxis.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m332569552#332569552#0(0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m8640935648#1859"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch -c /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/YAxis.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/main.o /Users/zzy/git/chartee/ios/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332569552.507087
+e332569552.580372
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/main.o
+x/Users/zzy/git/chartee/ios/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@41"Compile /Users/zzy/git/chartee/ios/main.m332569552#332569552#0(0"0(0#0#33"/Users/zzy/git/chartee/ios/main.m8658930848#1841"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch -c /Users/zzy/git/chartee/ios/main.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/main.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart-786763499471166C.o /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332563396.080013
+e332563396.478046
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart-786763499471166C.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m332563396#332563396#0(0"0(0#0#56"/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m8628782848#1681"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart-786763499471166C.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart.o /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332567797.757520
+e332567798.303787
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m: In function '-[CandleChart drawSerie:withLabels:]':
+o/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m:64: warning: unused variable 'label'
+lSLF07#2@64"Compile /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m332567797#332567798#0(204"/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m: In function '-[CandleChart drawSerie:withLabels:]':/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m:64: warning: unused variable 'label'1(22@23"Unused variable 'label'332567797#110#94#0(6@56"/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m332567681#64#0#64#0#19"unused variable '*'0(0#0#56"/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m8639442624#1664"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/CandleChart.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart-8764A4F53180F66A.o /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332563395.983958
+e332563397.077244
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart-8764A4F53180F66A.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart initYAxis]':
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: (Messages without a matching method signature
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: will be assumed to return 'id' and accept
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: '...' as arguments.)
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:78: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:81: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:85: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart drawChart]':
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:176: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:176: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:177: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:180: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:186: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:186: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:187: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:190: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type
+lSLF07#2@58"Compile /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332563395#332563397#0(2369"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart initYAxis]':/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: (Messages without a matching method signature/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: will be assumed to return 'id' and accept/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: '...' as arguments.)/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:78: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:81: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:85: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart drawChart]':/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:176: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:176: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:177: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:180: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:186: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:186: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:187: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:190: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type14(22@38"'NSObject' may not respond to '-count'332563396#86#103#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#77#0#77#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)332563396#189#110#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#77#0#77#0#0"0(22@38"Comparison between pointer and integer332563396#490#103#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#77#0#77#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332563396#593#112#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#78#0#78#0#26"'*' may not respond to '*'0(22@164"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type332563396#705#229#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#81#0#81#0#0"0(22@164"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type332563396#934#229#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#85#0#85#0#0"0(22@38"'NSObject' may not respond to '-count'332563396#1249#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#176#0#176#0#26"'*' may not respond to '*'0(22@38"Comparison between pointer and integer332563396#1353#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#176#0#176#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332563396#1457#113#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#177#0#177#0#26"'*' may not respond to '*'0(22@173"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type332563396#1570#239#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#180#0#180#0#0"0(22@38"'NSObject' may not respond to '-count'332563396#1809#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#186#0#186#0#26"'*' may not respond to '*'0(22@38"Comparison between pointer and integer332563396#1913#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#186#0#186#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332563396#2017#113#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#187#0#187#0#26"'*' may not respond to '*'0(22@173"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type332563396#2130#239#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332388867#190#0#190#0#0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m8629288640#1669"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart-8764A4F53180F66A.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart.o /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332568123.070334
+e332568124.217987
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart initYAxis]':
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: (Messages without a matching method signature
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: will be assumed to return 'id' and accept
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: '...' as arguments.)
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:78: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:81: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:85: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart drawChart]':
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:160: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:160: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:161: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:164: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:170: warning: 'NSObject' may not respond to '-count'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:170: warning: comparison between pointer and integer
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:171: warning: 'NSObject' may not respond to '-objectAtIndex:'
+o/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:174: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type
+lSLF07#2@58"Compile /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332568123#332568124#0(2369"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart initYAxis]':/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: (Messages without a matching method signature/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: will be assumed to return 'id' and accept/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: '...' as arguments.)/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:77: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:78: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:81: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:85: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m: In function '-[Chart drawChart]':/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:160: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:160: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:161: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:164: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:170: warning: 'NSObject' may not respond to '-count'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:170: warning: comparison between pointer and integer/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:171: warning: 'NSObject' may not respond to '-objectAtIndex:'/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m:174: warning: incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type14(22@38"'NSObject' may not respond to '-count'332568123#86#103#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#77#0#77#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)332568123#189#110#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#77#0#77#0#0"0(22@38"Comparison between pointer and integer332568123#490#103#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#77#0#77#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332568123#593#112#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#78#0#78#0#26"'*' may not respond to '*'0(22@164"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type332568123#705#229#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#81#0#81#0#0"0(22@164"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSDictionary *' when passing argument 1 of 'initYAxisWithSerie:' from distinct Objective-C type332568123#934#229#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#85#0#85#0#0"0(22@38"'NSObject' may not respond to '-count'332568123#1249#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#160#0#160#0#26"'*' may not respond to '*'0(22@38"Comparison between pointer and integer332568123#1353#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#160#0#160#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332568123#1457#113#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#161#0#161#0#26"'*' may not respond to '*'0(22@173"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type332568123#1570#239#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#164#0#164#0#0"0(22@38"'NSObject' may not respond to '-count'332568123#1809#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#170#0#170#0#26"'*' may not respond to '*'0(22@38"Comparison between pointer and integer332568123#1913#104#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#170#0#170#0#0"0(22@47"'NSObject' may not respond to '-objectAtIndex:'332568123#2017#113#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#171#0#171#0#26"'*' may not respond to '*'0(22@173"Incompatible Objective-C types 'struct NSObject *', expected 'struct NSMutableDictionary *' when passing argument 1 of 'drawSerie:withLabels:' from distinct Objective-C type332568123#2130#239#0(6@50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m332567644#174#0#174#0#0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.m8662729664#1652"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/Chart.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Chart.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section-8E35C46A072AA94.o /Users/zzy/git/chartee/ios/Classes/chartee/Section.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332563395.680288
+e332563396.079908
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section-8E35C46A072AA94.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/Section.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/zzy/git/chartee/ios/Classes/chartee/Section.m332563395#332563396#0(0"0(0#0#52"/Users/zzy/git/chartee/ios/Classes/chartee/Section.m8629056256#1672"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/Section.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section-8E35C46A072AA94.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section.o /Users/zzy/git/chartee/ios/Classes/chartee/Section.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332568121.977679
+e332568123.229224
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/Section.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/zzy/git/chartee/ios/Classes/chartee/Section.m332568121#332568123#0(0"0(0#0#52"/Users/zzy/git/chartee/ios/Classes/chartee/Section.m8648736320#1656"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/Section.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/Section.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis-17E09DF23D828A92.o /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332563395.679199
+e332563395.983862
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis-17E09DF23D828A92.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m332563395#332563395#0(0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m8629326752#1669"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis-17E09DF23D828A92.o0#
+
+CCompileC build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis.o /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332568121.921114
+e332568123.070071
+r1
+xCompileC
+xbuild/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis.o
+x/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m332568121#332568123#0(0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m8629081280#1652"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.m -o /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/YAxis.o0#
+
+CCompileXIB /Users/zzy/git/chartee/ios/CharteeViewController.xib
+s332569551.968658
+e332569552.506876
+r1
+xCompileXIB
+x/Users/zzy/git/chartee/ios/CharteeViewController.xib
+lSLF07#2@36"CompileXIB CharteeViewController.xib332569551#332569552#0(0"0(0#0#52"/Users/zzy/git/chartee/ios/CharteeViewController.xib8639374272#558"    cd /Users/zzy/git/chartee/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/CharteeViewController.nib /Users/zzy/git/chartee/ios/CharteeViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/zzy/git/chartee/ios/MainWindow.xib
+s332569551.962307
+e332569552.418714
+r1
+xCompileXIB
+x/Users/zzy/git/chartee/ios/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib332569551#332569552#0(0"0(0#0#41"/Users/zzy/git/chartee/ios/MainWindow.xib8640719008#536"    cd /Users/zzy/git/chartee/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/MainWindow.nib /Users/zzy/git/chartee/ios/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Release-iphonesimulator/Chartee.app/CandleChart.h Classes/chartee/CandleChart.h
+s332562424.220096
+e332562424.235056
+r1
+xCpResource
+xbuild/Release-iphonesimulator/Chartee.app/CandleChart.h
+xClasses/chartee/CandleChart.h
+lSLF07#2@34"Copy Classes/chartee/CandleChart.h332562424#332562424#0(0"0(0#0#56"/Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.h8618838112#474"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/zzy/git/chartee/ios/Classes/chartee/CandleChart.h /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app0#
+
+CCpResource build/Release-iphonesimulator/Chartee.app/Chart.h Classes/chartee/Chart.h
+s332569551.956396
+e332569551.968586
+r1
+xCpResource
+xbuild/Release-iphonesimulator/Chartee.app/Chart.h
+xClasses/chartee/Chart.h
+lSLF07#2@28"Copy Classes/chartee/Chart.h332569551#332569552#0(0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/Chart.h8641185568#468"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/zzy/git/chartee/ios/Classes/chartee/Chart.h /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app0#
+
+CCpResource build/Release-iphonesimulator/Chartee.app/Section.h Classes/chartee/Section.h
+s332569551.954563
+e332569551.968481
+r1
+xCpResource
+xbuild/Release-iphonesimulator/Chartee.app/Section.h
+xClasses/chartee/Section.h
+lSLF07#2@30"Copy Classes/chartee/Section.h332569551#332569552#0(0"0(0#0#52"/Users/zzy/git/chartee/ios/Classes/chartee/Section.h8642611072#470"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/zzy/git/chartee/ios/Classes/chartee/Section.h /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app0#
+
+CCpResource build/Release-iphonesimulator/Chartee.app/YAxis.h Classes/chartee/YAxis.h
+s332569551.953391
+e332569551.968358
+r1
+xCpResource
+xbuild/Release-iphonesimulator/Chartee.app/YAxis.h
+xClasses/chartee/YAxis.h
+lSLF07#2@28"Copy Classes/chartee/YAxis.h332569551#332569552#0(0"0(0#0#50"/Users/zzy/git/chartee/ios/Classes/chartee/YAxis.h8648379776#468"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/zzy/git/chartee/ios/Classes/chartee/YAxis.h /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app0#
+
+CGenerateDSYMFile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app.dSYM /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee
+s332569554.144483
+e332569554.165270
+r1
+xGenerateDSYMFile
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app.dSYM
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee
+lSLF07#2@113"GenerateDSYMFile build/Release-iphonesimulator/Chartee.app.dSYM build/Release-iphonesimulator/Chartee.app/Chartee332569554#332569554#0(0"0(0#0#76"/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee8658604032#351"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee -o /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app.dSYM0#
+
+CLd /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee normal i386
+s332569554.110140
+e332569554.144382
+r1
+xLd
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee
+xnormal
+xi386
+lSLF07#2@81"Link /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee332569554#332569554#0(0"0(0#0#0"8640970272#848"    cd /Users/zzy/git/chartee/ios    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -filelist /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Objects-normal/i386/Chartee.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Chartee0#
+
+CLibtool /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/libchartee.a normal i386
+s332569285.253254
+e332569285.346072
+r1
+xLibtool
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/libchartee.a
+xnormal
+xi386
+lSLF07#2@62"Libtool build/Release-iphonesimulator/libchartee.a normal i386332569285#332569285#0(0"0(0#0#0"8660275424#733"    cd /Users/zzy/git/chartee/ios    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -filelist /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/chartee.build/Objects-normal/i386/chartee.LinkFileList -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/libchartee.a0#
+
+CProcessInfoPlistFile /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Info.plist Chartee-Info.plist
+s332569551.945540
+e332569551.953293
+r1
+xProcessInfoPlistFile
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Info.plist
+xChartee-Info.plist
+lSLF07#2@26"Process Chartee-Info.plist332569551#332569552#0(0"0(0#0#45"/Users/zzy/git/chartee/ios/Chartee-Info.plist8658547968#447"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Chartee-Info.plist -genpkginfo /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app/Info.plist0#
+
+CProcessPCH /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch.gch Chartee_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s332562424.695289
+e332562425.514678
+r1
+xProcessPCH
+x/var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch.gch
+xChartee_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile Chartee_Prefix.pch332562424#332562425#0(0"0(0#0#45"/Users/zzy/git/chartee/ios/Chartee_Prefix.pch8628167168#1743"    cd /Users/zzy/git/chartee/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-generated-files.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-own-target-headers.hmap -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-all-target-headers.hmap -iquote /Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/Chartee-project-headers.hmap -F/Users/zzy/git/chartee/ios/build/Release-iphonesimulator -I/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/include -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources/i386 -I/Users/zzy/git/chartee/ios/build/Chartee.build/Release-iphonesimulator/Chartee.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/zzy/git/chartee/ios/Chartee_Prefix.pch -o /var/folders/Bz/Bz8ICNSCGuu879-do-d9X++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Chartee_Prefix-ggkviibexocjpqaybcdwzqexcxtt/Chartee_Prefix.pch.gch0#
+
+CTouch /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app
+s332569554.165358
+e332569554.168399
+r1
+xTouch
+x/Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app
+lSLF07#2@74"Touch /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app332569554#332569554#0(0"0(0#0#0"8652705344#256"    cd /Users/zzy/git/chartee/ios    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/zzy/git/chartee/ios/build/Release-iphonesimulator/Chartee.app0#
+

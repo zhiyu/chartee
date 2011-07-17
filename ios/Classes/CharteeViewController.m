@@ -10,7 +10,7 @@
 
 @implementation CharteeViewController
 
-@synthesize candle;
+@synthesize chart;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -34,7 +34,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.candle = [[CandleChart alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+	self.chart = [[Chart alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
 	
 	NSMutableArray *series = [[NSMutableArray alloc] init];
 	
@@ -47,16 +47,13 @@
 	for(int i=0;i<4000;i++){
 	    NSMutableArray *item = [[NSMutableArray alloc] init];
 		[item addObject:[NSString stringWithFormat:@"%f",(float)(30+random()%10)/10]];
-		[item addObject:[NSString stringWithFormat:@"%f",(float)(30+random()%10)/10]];
-		[item addObject:[NSString stringWithFormat:@"%f",(float)(40+random()%10)/10]];
-		[item addObject:[NSString stringWithFormat:@"%f",(float)(20+random()%10)/10]];
 		[data addObject:item];
 		[item release];
 	}
-	[serie setObject:@"candle" forKey:@"name"];
-	[serie setObject:@"candle" forKey:@"label"];
+	[serie setObject:@"Test" forKey:@"name"];
+	[serie setObject:@"Test" forKey:@"label"];
 	[serie setObject:data forKey:@"data"];
-	[serie setObject:@"candle" forKey:@"type"];
+	[serie setObject:@"line" forKey:@"type"];
 	[serie setObject:@"0" forKey:@"yAxis"];
 	[serie setObject:@"0" forKey:@"section"];
 	[serie setObject:@"189,119,117" forKey:@"color"];
@@ -221,32 +218,32 @@
 	[serie release];
 	
 	NSMutableArray *padding = [NSMutableArray arrayWithObjects:@"0",@"0",@"0",@"0",nil];
-	[candle setPadding:padding];
-	[candle setSeries:series];
+	[chart setPadding:padding];
+	[chart setSeries:series];
 	[series release];
 	
 	NSMutableArray *secs = [[NSMutableArray alloc] init];
 	[secs addObject:@"3"];
 	[secs addObject:@"1"];
 	[secs addObject:@"1"];
-	[candle addSections:3 withRatios:secs];
+	[chart addSections:3 withRatios:secs];
 	
-	[[[candle sections] objectAtIndex:0] addYAxis:0];
-	[[[candle sections] objectAtIndex:1] addYAxis:0];
-	[[[candle sections] objectAtIndex:2] addYAxis:0];
+	[[[chart sections] objectAtIndex:0] addYAxis:0];
+	[[[chart sections] objectAtIndex:1] addYAxis:0];
+	[[[chart sections] objectAtIndex:2] addYAxis:0];
 	
-	[[[candle sections] objectAtIndex:0] setSeries:sec1series];
-	[[[candle sections] objectAtIndex:1] setSeries:sec2series];
-	[[[candle sections] objectAtIndex:2] setSeries:sec3series];
-	[[[candle sections] objectAtIndex:1] setPaging:YES];
+	[[[chart sections] objectAtIndex:0] setSeries:sec1series];
+	[[[chart sections] objectAtIndex:1] setSeries:sec2series];
+	[[[chart sections] objectAtIndex:2] setSeries:sec3series];
+	[[[chart sections] objectAtIndex:1] setPaging:YES];
 	
 	[sec1series release];
 	[sec2series release];
 	[sec3series release];
 	[secs release];
 	
-	[self.view addSubview:candle];
-	[candle release];	
+	[self.view addSubview:chart];
+	[chart release];	
 }
 
 
@@ -263,12 +260,12 @@
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration{
 	//redraw views in level one,include toolbar,toolbar icons and main view
 	if((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) || (interfaceOrientation == UIInterfaceOrientationLandscapeRight)) {
-		[self.candle setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
+		[self.chart setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
 	}else{
-		[self.candle setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+		[self.chart setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
 	}
-	[self.candle setIsSectionInitialized:NO];
-	[self.candle setNeedsDisplay];
+	[self.chart setIsSectionInitialized:NO];
+	[self.chart setNeedsDisplay];
 }
 
 - (void)didReceiveMemoryWarning {

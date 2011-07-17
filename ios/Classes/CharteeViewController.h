@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CandleChart.h"
+#import "Chart.h"
 @interface CharteeViewController : UIViewController {
-    CandleChart *candle;
+    Chart *chart;
 }
 
-@property (nonatomic,retain) CandleChart *candle;
+@property (nonatomic,retain)  Chart *chart;
 
 @end
 
