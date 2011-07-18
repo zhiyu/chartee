@@ -621,35 +621,42 @@
 	if([ts count]==1){
 		UITouch* touch = [ts objectAtIndex:0];
 		
-		if([touch locationInView:self].x > 40)
-			[self setSelectedIndexByPoint:[touch locationInView:self]];
-		
-		if([touch locationInView:self].x < 40){
-			if(abs([touch locationInView:self].y - self.touchFlag) >= MIN_INTERVAL){
-				if([touch locationInView:self].y - self.touchFlag > 0){
-					if(self.rangeFrom - 1 >= 0){
-						self.rangeFrom -= 1;
-						self.rangeTo   -= 1;
-						
-						if(self.selectedIndex >= self.rangeTo){
-						    self.selectedIndex = self.rangeTo-1;
+		int i = [self getSectionIndexByPoint:[touch locationInView:self]];
+		if(i!=-1){
+			
+			Section *sec = [self.sections objectAtIndex:i];
+			
+			if([touch locationInView:self].x > sec.paddingLeft)
+				[self setSelectedIndexByPoint:[touch locationInView:self]];
+			
+			if([touch locationInView:self].x < sec.paddingLeft){
+				if(abs([touch locationInView:self].y - self.touchFlag) >= MIN_INTERVAL){
+					if([touch locationInView:self].y - self.touchFlag > 0){
+						if(self.rangeFrom - 1 >= 0){
+							self.rangeFrom -= 1;
+							self.rangeTo   -= 1;
+							
+							if(self.selectedIndex >= self.rangeTo){
+								self.selectedIndex = self.rangeTo-1;
+							}
+							[self setNeedsDisplay];
 						}
-						[self setNeedsDisplay];
-					}
-				}else{
-					if(self.rangeTo + 1 <= self.plotCount){
-						self.rangeFrom += 1;
-						self.rangeTo += 1;
-						
-						if(self.selectedIndex < self.rangeFrom){
-						    self.selectedIndex = self.rangeFrom;
+					}else{
+						if(self.rangeTo + 1 <= self.plotCount){
+							self.rangeFrom += 1;
+							self.rangeTo += 1;
+							
+							if(self.selectedIndex < self.rangeFrom){
+								self.selectedIndex = self.rangeFrom;
+							}
+							[self setNeedsDisplay];
 						}
-						[self setNeedsDisplay];
 					}
+					self.touchFlag = [touch locationInView:self].y;
 				}
-				self.touchFlag = [touch locationInView:self].y;
 			}
 		}
+		
 	}else if ([ts count]==2) {
 		float currFlag = abs([[ts objectAtIndex:0] locationInView:self].x-[[ts objectAtIndex:1] locationInView:self].x);
 		if(self.touchFlag == 0){
@@ -684,11 +691,10 @@
 	NSArray *ts = [touches allObjects];	
 	UITouch* touch = [[event allTouches] anyObject];
 	if([ts count]==1){
-		if([touch locationInView:self].x > 40){
-			int i = [self getSectionIndexByPoint:[touch locationInView:self]];
-			
-			if(i!=-1){
-				Section *sec = [self.sections objectAtIndex:i];
+		int i = [self getSectionIndexByPoint:[touch locationInView:self]];
+		if(i!=-1){
+			Section *sec = [self.sections objectAtIndex:i];
+			if([touch locationInView:self].x > sec.paddingLeft){
 				if(sec.paging){
 					[sec nextPage];
 					[self setNeedsDisplay];
@@ -696,7 +702,6 @@
 					[self setSelectedIndexByPoint:[touch locationInView:self]];
 				}
 			}
-			
 		}
 	}
 	self.touchFlag = 0;

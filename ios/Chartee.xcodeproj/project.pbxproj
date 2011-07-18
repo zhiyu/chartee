@@ -19,25 +19,15 @@
 		5A8226CA13D27DF7002CF361 /* Section.h in Resources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0013CFD7680007054D /* Section.h */; };
 		5A8226CB13D27DF7002CF361 /* Chart.h in Resources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0213CFD7680007054D /* Chart.h */; };
 		5A822AB913D29A7D002CF361 /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6AFD13CFD7680007054D /* YAxis.m */; };
-		5A822ABA13D29A7D002CF361 /* YAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ADE6AFE13CFD7680007054D /* YAxis.h */; };
+		5A822ABA13D29A7D002CF361 /* YAxis.h in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6AFE13CFD7680007054D /* YAxis.h */; };
 		5A822ABB13D29A7D002CF361 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6AFF13CFD7680007054D /* Section.m */; };
-		5A822ABC13D29A7D002CF361 /* Section.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ADE6B0013CFD7680007054D /* Section.h */; };
+		5A822ABC13D29A7D002CF361 /* Section.h in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0013CFD7680007054D /* Section.h */; };
 		5A822ABD13D29A7D002CF361 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0113CFD7680007054D /* Chart.m */; };
-		5A822ABE13D29A7D002CF361 /* Chart.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ADE6B0213CFD7680007054D /* Chart.h */; };
+		5A822ABE13D29A7D002CF361 /* Chart.h in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0213CFD7680007054D /* Chart.h */; };
 		5ADE6B0513CFD7680007054D /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6AFD13CFD7680007054D /* YAxis.m */; };
 		5ADE6B0613CFD7680007054D /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6AFF13CFD7680007054D /* Section.m */; };
 		5ADE6B0713CFD7680007054D /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE6B0113CFD7680007054D /* Chart.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5A822B8F13D29C34002CF361 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A822AB513D29A68002CF361 /* chartee */;
-			remoteInfo = chartee;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,9 +159,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A822ABA13D29A7D002CF361 /* YAxis.h in Headers */,
-				5A822ABC13D29A7D002CF361 /* Section.h in Headers */,
-				5A822ABE13D29A7D002CF361 /* Chart.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +176,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5A822B9013D29C34002CF361 /* PBXTargetDependency */,
 			);
 			name = Chartee;
 			productName = Chartee;
@@ -271,6 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A822ABA13D29A7D002CF361 /* YAxis.h in Sources */,
+				5A822ABC13D29A7D002CF361 /* Section.h in Sources */,
+				5A822ABE13D29A7D002CF361 /* Chart.h in Sources */,
 				5A822AB913D29A7D002CF361 /* YAxis.m in Sources */,
 				5A822ABB13D29A7D002CF361 /* Section.m in Sources */,
 				5A822ABD13D29A7D002CF361 /* Chart.m in Sources */,
@@ -278,14 +267,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5A822B9013D29C34002CF361 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A822AB513D29A68002CF361 /* chartee */;
-			targetProxy = 5A822B8F13D29C34002CF361 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
