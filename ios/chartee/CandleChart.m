@@ -85,8 +85,8 @@
 	}	
 }
 
--(void)setLabel:(NSMutableArray *)label WithSerie:(NSMutableDictionary *) serie{
-    [super setLabel:label WithSerie:serie];
+-(void)setLabel:(NSMutableArray *)label forSerie:(NSMutableDictionary *) serie{
+    [super setLabel:label forSerie:serie];
 	
 	if([serie objectForKey:@"data"] == nil || [[serie objectForKey:@"data"] count] == 0){
 	    return;

@@ -296,19 +296,19 @@
 				if (sec.selectedIndex == s) {
 					if([serie isKindOfClass:[NSArray class]]){
 						for(int i=0;i<[serie count];i++){
-							[self setLabel:label WithSerie:[serie objectAtIndex:i]];
+							[self setLabel:label forSerie:[serie objectAtIndex:i]];
 						}
 					}else{
-						[self setLabel:label WithSerie:serie];
+						[self setLabel:label forSerie:serie];
 					}
 				}
 			}else{
 				if([serie isKindOfClass:[NSArray class]]){
 					for(int i=0;i<[serie count];i++){
-						[self setLabel:label WithSerie:[serie objectAtIndex:i]];
+						[self setLabel:label forSerie:[serie objectAtIndex:i]];
 					}
 				}else{
-					[self setLabel:label WithSerie:serie];
+					[self setLabel:label forSerie:serie];
 				}
 			}	
 			for(int j=0;j<label.count;j++){
@@ -327,7 +327,7 @@
 	}
 }
 
--(void)setLabel:(NSMutableArray *)label WithSerie:(NSMutableDictionary *) serie{
+-(void)setLabel:(NSMutableArray *)label forSerie:(NSMutableDictionary *) serie{
 	if([serie objectForKey:@"data"] == nil || [[serie objectForKey:@"data"] count] == 0){
 	    return;
 	}

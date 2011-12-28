@@ -76,7 +76,7 @@
 -(void)drawSerie:(NSMutableDictionary *)serie;
 -(void)drawTips:(NSMutableDictionary *)serie;
 -(void)drawLabels;
--(void)setLabel:(NSMutableArray *)label WithSerie:(NSMutableDictionary *) serie;
+-(void)setLabel:(NSMutableArray *)label forSerie:(NSMutableDictionary *) serie;
 
 /* data */
 -(void)appendToData:(NSArray *)data forName:(NSString *)name;
