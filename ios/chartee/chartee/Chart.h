@@ -91,12 +91,12 @@
 -(void)setCategory:(NSMutableArray *)category forName:(NSString *)name;
 
 /* series */
--(NSMutableDictionary *)getSerieByName:(NSString *)name;
+-(NSMutableDictionary *)getSerie:(NSString *)name;
 -(void)addSerie:(NSObject *)serie;
 
 /* section */
 -(Section *)getSection:(int) index;
--(int)getSectionIndexByPoint:(CGPoint) point;
+-(int) getIndexOfSection:(CGPoint) point;
 -(void)addSection:(NSString *)ratio;
 -(void)removeSection:(int)index;
 -(void)addSections:(int)num withRatios:(NSArray *)rats;
@@ -104,7 +104,7 @@
 -(void)initSections;
 
 /* YAxis */
--(YAxis *)getYAxisInSection:(int) section AtIndex:(int) index;
+-(YAxis *)getYAxis:(int) section withIndex:(int) index;
 -(void)setValuesForYAxis:(NSDictionary *)serie;
 
 @end

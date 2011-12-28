@@ -427,7 +427,6 @@
 	NSMutableArray *data          = [serie objectForKey:@"data"];
 	NSString       *type          = [serie objectForKey:@"type"];
 	NSString       *name          = [serie objectForKey:@"name"];
-	int            yAxis          = [[serie objectForKey:@"yAxis"] intValue];
 	int            section        = [[serie objectForKey:@"section"] intValue];
 	NSMutableArray *category      = [serie objectForKey:@"category"];
 	Section *sec = [self.sections objectAtIndex:section];

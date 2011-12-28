@@ -831,10 +831,10 @@
 
 -(void) setSelectedIndexByPoint:(CGPoint) point{
 	
-	if([self getSectionIndexByPoint:point] == -1){
+	if([self getIndexOfSection:point] == -1){
 		return;
 	}
-	Section *sec = [self.sections objectAtIndex:[self getSectionIndexByPoint:point]];
+	Section *sec = [self.sections objectAtIndex:[self getIndexOfSection:point]];
 	
 	for(int i=self.rangeFrom;i<self.rangeTo;i++){
 		if((plotWidth*(i-self.rangeFrom))<=(point.x-sec.paddingLeft-self.paddingLeft) && (point.x-sec.paddingLeft-self.paddingLeft)<plotWidth*((i-self.rangeFrom)+1)){
@@ -935,7 +935,7 @@
 -(Section *)getSection:(int) index{
     return [self.sections objectAtIndex:index];
 }
--(int)getSectionIndexByPoint:(CGPoint) point{
+-(int)getIndexOfSection:(CGPoint) point{
     for(int i=0;i<self.sections.count;i++){
 	    Section *sec = [self.sections objectAtIndex:i];
 		if (CGRectContainsPoint(sec.frame, point)){
@@ -948,7 +948,7 @@
 /*
  * series
  */
--(NSMutableDictionary *)getSerieByName:(NSString *)name{
+-(NSMutableDictionary *)getSerie:(NSString *)name{
 	NSMutableDictionary *serie = nil;
     for(int i=0;i<self.series.count;i++){
 		if([[[self.series objectAtIndex:i] objectForKey:@"name"] isEqualToString:name]){
@@ -1046,7 +1046,7 @@
 }
 
 
--(YAxis *)getYAxisInSection:(int) section AtIndex:(int) index{
+-(YAxis *)getYAxis:(int) section withIndex:(int) index{
 	Section *sec = [self.sections objectAtIndex:section];
 	YAxis *yaxis = [sec.yAxises objectAtIndex:index];
     return yaxis;
@@ -1126,7 +1126,7 @@
 	NSArray *ts = [touches allObjects];	
 	if([ts count]==1){
 		UITouch* touch = [ts objectAtIndex:0];
-		int i = [self getSectionIndexByPoint:[touch locationInView:self]];
+		int i = [self getIndexOfSection:[touch locationInView:self]];
 		if(i!=-1){
 			Section *sec = [self.sections objectAtIndex:i];
 			if([touch locationInView:self].x > sec.paddingLeft)
@@ -1258,7 +1258,7 @@
 	NSArray *ts = [touches allObjects];	
 	UITouch* touch = [[event allTouches] anyObject];
 	if([ts count]==1){
-		int i = [self getSectionIndexByPoint:[touch locationInView:self]];
+		int i = [self getIndexOfSection:[touch locationInView:self]];
 		if(i!=-1){
 			Section *sec = [self.sections objectAtIndex:i];
 			if([touch locationInView:self].x > sec.paddingLeft){

@@ -76,9 +76,9 @@
 	[[[self.kline sections] objectAtIndex:1] addYAxis:0];
 	[[[self.kline sections] objectAtIndex:2] addYAxis:0];
 	
-	[self.kline getYAxisInSection:2 AtIndex:0].baseValueSticky = NO;
-	[self.kline getYAxisInSection:2 AtIndex:0].symmetrical = NO;
-	[self.kline getYAxisInSection:0 AtIndex:0].ext = 0.05;
+	[self.kline getYAxis:2 withIndex:0].baseValueSticky = NO;
+	[self.kline getYAxis:2 withIndex:0].symmetrical = NO;
+	[self.kline getYAxis:0 withIndex:0].ext = 0.05;
 	NSMutableArray *series = [[NSMutableArray alloc] init];
 	NSMutableArray *secOne = [[NSMutableArray alloc] init];
 	NSMutableArray *secTwo = [[NSMutableArray alloc] init];
@@ -564,7 +564,7 @@
 	[self.kline appendToData:[dic objectForKey:@"kdj_d"] forName:@"kdj_d"];
 	[self.kline appendToData:[dic objectForKey:@"kdj_j"] forName:@"kdj_j"];
 	
-	NSMutableDictionary *serie = [self.kline getSerieByName:@"price"];
+	NSMutableDictionary *serie = [self.kline getSerie:@"price"];
 	if(serie == nil)
 		return;
 	if(self.chartMode == 1){
