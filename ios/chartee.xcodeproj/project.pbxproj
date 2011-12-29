@@ -12,10 +12,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		5A1D3B6D14AC52AB00E11C20 /* chartee-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A1D3B6C14AC52AA00E11C20 /* chartee-Info.plist */; };
-		5A3F820C145E35C3004EAF87 /* CandleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F820B145E35C3004EAF87 /* CandleChart.m */; };
-		5A3F8213145E3657004EAF87 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F820E145E3657004EAF87 /* Chart.m */; };
-		5A3F8214145E3657004EAF87 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F8210145E3657004EAF87 /* Section.m */; };
-		5A3F8215145E3657004EAF87 /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F8212145E3657004EAF87 /* YAxis.m */; };
 		5A3F8221145E3687004EAF87 /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F821C145E3687004EAF87 /* Date.m */; };
 		5A3F8227145E36B5004EAF87 /* AutoCompleteDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F8224145E36B5004EAF87 /* AutoCompleteDelegate.m */; };
 		5A3F824E145E371A004EAF87 /* CandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3F824B145E371A004EAF87 /* CandleViewController.m */; };
@@ -64,6 +60,10 @@
 		5A8FA0A314AC710B000A1BBA /* pad_k1w.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FA09A14AC710B000A1BBA /* pad_k1w.png */; };
 		5A8FA0A614AC7113000A1BBA /* indicators.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FA0A414AC7113000A1BBA /* indicators.json */; };
 		5A8FA0A714AC7113000A1BBA /* securities.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FA0A514AC7113000A1BBA /* securities.json */; };
+		5A8FA0B314AC737E000A1BBA /* CandleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0AC14AC737E000A1BBA /* CandleChart.m */; };
+		5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0AE14AC737E000A1BBA /* Chart.m */; };
+		5A8FA0B514AC737E000A1BBA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B014AC737E000A1BBA /* Section.m */; };
+		5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B214AC737E000A1BBA /* YAxis.m */; };
 		5AEFEF5A148E255D00453B4F /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFEF59148E255D00453B4F /* NSString.m */; };
 /* End PBXBuildFile section */
 
@@ -75,14 +75,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* chartee_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chartee_Prefix.pch; sourceTree = "<group>"; };
 		5A1D3B6C14AC52AA00E11C20 /* chartee-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "chartee-Info.plist"; sourceTree = "<group>"; };
-		5A3F820A145E35C3004EAF87 /* CandleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandleChart.h; sourceTree = "<group>"; };
-		5A3F820B145E35C3004EAF87 /* CandleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandleChart.m; sourceTree = "<group>"; };
-		5A3F820D145E3657004EAF87 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
-		5A3F820E145E3657004EAF87 /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
-		5A3F820F145E3657004EAF87 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
-		5A3F8210145E3657004EAF87 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
-		5A3F8211145E3657004EAF87 /* YAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAxis.h; sourceTree = "<group>"; };
-		5A3F8212145E3657004EAF87 /* YAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAxis.m; sourceTree = "<group>"; };
 		5A3F821B145E3687004EAF87 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
 		5A3F821C145E3687004EAF87 /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
 		5A3F8223145E36B5004EAF87 /* AutoCompleteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCompleteDelegate.h; sourceTree = "<group>"; };
@@ -165,6 +157,14 @@
 		5A8FA09A14AC710B000A1BBA /* pad_k1w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pad_k1w.png; path = resource/pad_k1w.png; sourceTree = "<group>"; };
 		5A8FA0A414AC7113000A1BBA /* indicators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = indicators.json; path = resource/indicators.json; sourceTree = "<group>"; };
 		5A8FA0A514AC7113000A1BBA /* securities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = securities.json; path = resource/securities.json; sourceTree = "<group>"; };
+		5A8FA0AB14AC737E000A1BBA /* CandleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CandleChart.h; path = chartee/CandleChart.h; sourceTree = SOURCE_ROOT; };
+		5A8FA0AC14AC737E000A1BBA /* CandleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CandleChart.m; path = chartee/CandleChart.m; sourceTree = SOURCE_ROOT; };
+		5A8FA0AD14AC737E000A1BBA /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chart.h; path = chartee/Chart.h; sourceTree = SOURCE_ROOT; };
+		5A8FA0AE14AC737E000A1BBA /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chart.m; path = chartee/Chart.m; sourceTree = SOURCE_ROOT; };
+		5A8FA0AF14AC737E000A1BBA /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Section.h; path = chartee/Section.h; sourceTree = SOURCE_ROOT; };
+		5A8FA0B014AC737E000A1BBA /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Section.m; path = chartee/Section.m; sourceTree = SOURCE_ROOT; };
+		5A8FA0B114AC737E000A1BBA /* YAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAxis.h; path = chartee/YAxis.h; sourceTree = SOURCE_ROOT; };
+		5A8FA0B214AC737E000A1BBA /* YAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAxis.m; path = chartee/YAxis.m; sourceTree = SOURCE_ROOT; };
 		5AEFEF58148E255D00453B4F /* NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString.h; sourceTree = "<group>"; };
 		5AEFEF59148E255D00453B4F /* NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,8 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				5A3F8207145E3576004EAF87 /* component */,
+				5A3F8203145E3557004EAF87 /* chartee */,
 				5A3FC8B614AAFD0800DD3BE2 /* lib */,
-				5A3F8202145E3551004EAF87 /* chart */,
 				5A3F8204145E355E004EAF87 /* category */,
 				5A3F8251145E3749004EAF87 /* AppDelegate.h */,
 				5A3F8252145E3749004EAF87 /* AppDelegate.m */,
@@ -262,25 +262,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A3F8202145E3551004EAF87 /* chart */ = {
-			isa = PBXGroup;
-			children = (
-				5A3F8203145E3557004EAF87 /* chartee */,
-				5A3F820A145E35C3004EAF87 /* CandleChart.h */,
-				5A3F820B145E35C3004EAF87 /* CandleChart.m */,
-			);
-			name = chart;
-			sourceTree = "<group>";
-		};
 		5A3F8203145E3557004EAF87 /* chartee */ = {
 			isa = PBXGroup;
 			children = (
-				5A3F820D145E3657004EAF87 /* Chart.h */,
-				5A3F820E145E3657004EAF87 /* Chart.m */,
-				5A3F820F145E3657004EAF87 /* Section.h */,
-				5A3F8210145E3657004EAF87 /* Section.m */,
-				5A3F8211145E3657004EAF87 /* YAxis.h */,
-				5A3F8212145E3657004EAF87 /* YAxis.m */,
+				5A8FA0AB14AC737E000A1BBA /* CandleChart.h */,
+				5A8FA0AC14AC737E000A1BBA /* CandleChart.m */,
+				5A8FA0AD14AC737E000A1BBA /* Chart.h */,
+				5A8FA0AE14AC737E000A1BBA /* Chart.m */,
+				5A8FA0AF14AC737E000A1BBA /* Section.h */,
+				5A8FA0B014AC737E000A1BBA /* Section.m */,
+				5A8FA0B114AC737E000A1BBA /* YAxis.h */,
+				5A8FA0B214AC737E000A1BBA /* YAxis.m */,
 			);
 			name = chartee;
 			sourceTree = "<group>";
@@ -482,10 +474,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				5A3F820C145E35C3004EAF87 /* CandleChart.m in Sources */,
-				5A3F8213145E3657004EAF87 /* Chart.m in Sources */,
-				5A3F8214145E3657004EAF87 /* Section.m in Sources */,
-				5A3F8215145E3657004EAF87 /* YAxis.m in Sources */,
 				5A3F8221145E3687004EAF87 /* Date.m in Sources */,
 				5A3F8227145E36B5004EAF87 /* AutoCompleteDelegate.m in Sources */,
 				5A3F824E145E371A004EAF87 /* CandleViewController.m in Sources */,
@@ -515,6 +503,10 @@
 				5A3FC93314AAFD5300DD3BE2 /* SBJsonTokeniser.m in Sources */,
 				5A3FC93414AAFD5300DD3BE2 /* SBJsonUTF8Stream.m in Sources */,
 				5A3FC93514AAFD5300DD3BE2 /* SBJsonWriter.m in Sources */,
+				5A8FA0B314AC737E000A1BBA /* CandleChart.m in Sources */,
+				5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */,
+				5A8FA0B514AC737E000A1BBA /* Section.m in Sources */,
+				5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
