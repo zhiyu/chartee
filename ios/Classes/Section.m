@@ -65,7 +65,7 @@
 		self.isInitialized   = NO;
 		self.paging          = NO;
 		self.selectedIndex   = 0;
-		self.paddingLeft     = 50;
+		self.paddingLeft     = 60;
 		self.paddingRight    = 0;
 		self.paddingTop      = 20;
 		self.paddingBottom   = 0;

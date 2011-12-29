@@ -512,7 +512,7 @@
 
 -(void)getAutoCompleteData{	
     NSString *securities =[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"securities" ofType:@"json"] encoding:NSUTF8StringEncoding error:nil];
-    NSArray *data = [securities JSONValue];
+    NSMutableArray *data = [securities JSONValue];
     self.autoCompleteDelegate.items = data;
 }
 
