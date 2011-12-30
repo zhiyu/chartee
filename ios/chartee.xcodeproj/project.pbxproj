@@ -217,6 +217,11 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				5A1D3B6C14AC52AA00E11C20 /* chartee-Info.plist */,
+				5A8FA08114AC6748000A1BBA /* Icon-72.png */,
+				5A8FA08214AC6748000A1BBA /* Icon.png */,
+				5A8FA08314AC6748000A1BBA /* Icon@2x.png */,
+				5A8FA08414AC6748000A1BBA /* iTunesArtwork.png */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -237,12 +242,7 @@
 			children = (
 				5A8FA0A414AC7113000A1BBA /* indicators.json */,
 				5A8FA0A514AC7113000A1BBA /* securities.json */,
-				5A8FA08114AC6748000A1BBA /* Icon-72.png */,
-				5A8FA08214AC6748000A1BBA /* Icon.png */,
-				5A8FA08314AC6748000A1BBA /* Icon@2x.png */,
-				5A8FA08414AC6748000A1BBA /* iTunesArtwork.png */,
 				5A3F82CA145E3944004EAF87 /* img */,
-				5A1D3B6C14AC52AA00E11C20 /* chartee-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
