@@ -219,16 +219,16 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				5A5FFC3014AD4CFD000B3CC3 /* iTunesArtwork.png */,
 				5A8BFACC14AD5D6800B490CF /* Icon-72.png */,
 				5A8BFACD14AD5D6800B490CF /* Icon-Small-50.png */,
 				5A8BFACE14AD5D6800B490CF /* Icon-Small.png */,
 				5A8BFACF14AD5D6800B490CF /* Icon-Small@2x.png */,
 				5A8BFAD014AD5D6800B490CF /* Icon.png */,
 				5A8BFAD114AD5D6800B490CF /* Icon@2x.png */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
-				5A5FFC3014AD4CFD000B3CC3 /* iTunesArtwork.png */,
 				5A1D3B6C14AC52AA00E11C20 /* chartee-Info.plist */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
