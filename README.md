@@ -1,6 +1,6 @@
 ### What is Chartee
 
-Chartee is a charting library which currently supports ios application development.
+Chartee is a charting library which currently supports ios platform.
 
 ### How to use
 
