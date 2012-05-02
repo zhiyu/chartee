@@ -45,7 +45,11 @@
 		5A3FC93314AAFD5300DD3BE2 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FC8EF14AAFD5300DD3BE2 /* SBJsonTokeniser.m */; };
 		5A3FC93414AAFD5300DD3BE2 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FC8F114AAFD5300DD3BE2 /* SBJsonUTF8Stream.m */; };
 		5A3FC93514AAFD5300DD3BE2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FC8F314AAFD5300DD3BE2 /* SBJsonWriter.m */; };
-		5A71628F155133940055A10B /* CandleChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71628E155133940055A10B /* CandleChartModel.m */; };
+		5A7162C7155143EC0055A10B /* AreaChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7162BE155143EC0055A10B /* AreaChartModel.m */; };
+		5A7162C8155143EC0055A10B /* CandleChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7162C0155143EC0055A10B /* CandleChartModel.m */; };
+		5A7162C9155143EC0055A10B /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7162C2155143EC0055A10B /* ChartModel.m */; };
+		5A7162CA155143EC0055A10B /* ColumnChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7162C4155143EC0055A10B /* ColumnChartModel.m */; };
+		5A7162CB155143EC0055A10B /* LineChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7162C6155143EC0055A10B /* LineChartModel.m */; };
 		5A8BFAD214AD5D6800B490CF /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8BFACC14AD5D6800B490CF /* Icon-72.png */; };
 		5A8BFAD314AD5D6800B490CF /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8BFACD14AD5D6800B490CF /* Icon-Small-50.png */; };
 		5A8BFAD414AD5D6800B490CF /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8BFACE14AD5D6800B490CF /* Icon-Small.png */; };
@@ -67,10 +71,6 @@
 		5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0AE14AC737E000A1BBA /* Chart.m */; };
 		5A8FA0B514AC737E000A1BBA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B014AC737E000A1BBA /* Section.m */; };
 		5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B214AC737E000A1BBA /* YAxis.m */; };
-		5AED861C155127E4004C0DEE /* LineChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED861B155127E4004C0DEE /* LineChartModel.m */; };
-		5AED861F155129AD004C0DEE /* AreaChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED861E155129AD004C0DEE /* AreaChartModel.m */; };
-		5AED8622155129BB004C0DEE /* ColumnChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED8621155129BB004C0DEE /* ColumnChartModel.m */; };
-		5AED862515512B19004C0DEE /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED862415512B19004C0DEE /* ChartModel.m */; };
 		5AEFEF5A148E255D00453B4F /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFEF59148E255D00453B4F /* NSString.m */; };
 /* End PBXBuildFile section */
 
@@ -150,8 +150,16 @@
 		5A3FC8F214AAFD5300DD3BE2 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		5A3FC8F314AAFD5300DD3BE2 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		5A5FFC3014AD4CFD000B3CC3 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		5A71628D155133940055A10B /* CandleChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CandleChartModel.h; path = classes/CandleChartModel.h; sourceTree = SOURCE_ROOT; };
-		5A71628E155133940055A10B /* CandleChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CandleChartModel.m; path = classes/CandleChartModel.m; sourceTree = SOURCE_ROOT; };
+		5A7162BD155143EC0055A10B /* AreaChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaChartModel.h; path = chartee/AreaChartModel.h; sourceTree = SOURCE_ROOT; };
+		5A7162BE155143EC0055A10B /* AreaChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaChartModel.m; path = chartee/AreaChartModel.m; sourceTree = SOURCE_ROOT; };
+		5A7162BF155143EC0055A10B /* CandleChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CandleChartModel.h; path = chartee/CandleChartModel.h; sourceTree = SOURCE_ROOT; };
+		5A7162C0155143EC0055A10B /* CandleChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CandleChartModel.m; path = chartee/CandleChartModel.m; sourceTree = SOURCE_ROOT; };
+		5A7162C1155143EC0055A10B /* ChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartModel.h; path = chartee/ChartModel.h; sourceTree = SOURCE_ROOT; };
+		5A7162C2155143EC0055A10B /* ChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartModel.m; path = chartee/ChartModel.m; sourceTree = SOURCE_ROOT; };
+		5A7162C3155143EC0055A10B /* ColumnChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColumnChartModel.h; path = chartee/ColumnChartModel.h; sourceTree = SOURCE_ROOT; };
+		5A7162C4155143EC0055A10B /* ColumnChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColumnChartModel.m; path = chartee/ColumnChartModel.m; sourceTree = SOURCE_ROOT; };
+		5A7162C5155143EC0055A10B /* LineChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChartModel.h; path = chartee/LineChartModel.h; sourceTree = SOURCE_ROOT; };
+		5A7162C6155143EC0055A10B /* LineChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineChartModel.m; path = chartee/LineChartModel.m; sourceTree = SOURCE_ROOT; };
 		5A8BFACC14AD5D6800B490CF /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		5A8BFACD14AD5D6800B490CF /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		5A8BFACE14AD5D6800B490CF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -177,14 +185,6 @@
 		5A8FA0B014AC737E000A1BBA /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Section.m; path = chartee/Section.m; sourceTree = SOURCE_ROOT; };
 		5A8FA0B114AC737E000A1BBA /* YAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAxis.h; path = chartee/YAxis.h; sourceTree = SOURCE_ROOT; };
 		5A8FA0B214AC737E000A1BBA /* YAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAxis.m; path = chartee/YAxis.m; sourceTree = SOURCE_ROOT; };
-		5AED861715512719004C0DEE /* ChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartModel.h; path = classes/ChartModel.h; sourceTree = SOURCE_ROOT; };
-		5AED861A155127E4004C0DEE /* LineChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChartModel.h; path = classes/LineChartModel.h; sourceTree = SOURCE_ROOT; };
-		5AED861B155127E4004C0DEE /* LineChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineChartModel.m; path = classes/LineChartModel.m; sourceTree = SOURCE_ROOT; };
-		5AED861D155129AD004C0DEE /* AreaChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaChartModel.h; path = classes/AreaChartModel.h; sourceTree = SOURCE_ROOT; };
-		5AED861E155129AD004C0DEE /* AreaChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaChartModel.m; path = classes/AreaChartModel.m; sourceTree = SOURCE_ROOT; };
-		5AED8620155129BB004C0DEE /* ColumnChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColumnChartModel.h; path = classes/ColumnChartModel.h; sourceTree = SOURCE_ROOT; };
-		5AED8621155129BB004C0DEE /* ColumnChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColumnChartModel.m; path = classes/ColumnChartModel.m; sourceTree = SOURCE_ROOT; };
-		5AED862415512B19004C0DEE /* ChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartModel.m; path = classes/ChartModel.m; sourceTree = SOURCE_ROOT; };
 		5AEFEF58148E255D00453B4F /* NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString.h; sourceTree = "<group>"; };
 		5AEFEF59148E255D00453B4F /* NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -425,16 +425,16 @@
 		5AED861615512435004C0DEE /* model */ = {
 			isa = PBXGroup;
 			children = (
-				5AED861715512719004C0DEE /* ChartModel.h */,
-				5AED862415512B19004C0DEE /* ChartModel.m */,
-				5AED861A155127E4004C0DEE /* LineChartModel.h */,
-				5AED861B155127E4004C0DEE /* LineChartModel.m */,
-				5AED861D155129AD004C0DEE /* AreaChartModel.h */,
-				5AED861E155129AD004C0DEE /* AreaChartModel.m */,
-				5AED8620155129BB004C0DEE /* ColumnChartModel.h */,
-				5AED8621155129BB004C0DEE /* ColumnChartModel.m */,
-				5A71628D155133940055A10B /* CandleChartModel.h */,
-				5A71628E155133940055A10B /* CandleChartModel.m */,
+				5A7162BD155143EC0055A10B /* AreaChartModel.h */,
+				5A7162BE155143EC0055A10B /* AreaChartModel.m */,
+				5A7162BF155143EC0055A10B /* CandleChartModel.h */,
+				5A7162C0155143EC0055A10B /* CandleChartModel.m */,
+				5A7162C1155143EC0055A10B /* ChartModel.h */,
+				5A7162C2155143EC0055A10B /* ChartModel.m */,
+				5A7162C3155143EC0055A10B /* ColumnChartModel.h */,
+				5A7162C4155143EC0055A10B /* ColumnChartModel.m */,
+				5A7162C5155143EC0055A10B /* LineChartModel.h */,
+				5A7162C6155143EC0055A10B /* LineChartModel.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -550,11 +550,11 @@
 				5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */,
 				5A8FA0B514AC737E000A1BBA /* Section.m in Sources */,
 				5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */,
-				5AED861C155127E4004C0DEE /* LineChartModel.m in Sources */,
-				5AED861F155129AD004C0DEE /* AreaChartModel.m in Sources */,
-				5AED8622155129BB004C0DEE /* ColumnChartModel.m in Sources */,
-				5AED862515512B19004C0DEE /* ChartModel.m in Sources */,
-				5A71628F155133940055A10B /* CandleChartModel.m in Sources */,
+				5A7162C7155143EC0055A10B /* AreaChartModel.m in Sources */,
+				5A7162C8155143EC0055A10B /* CandleChartModel.m in Sources */,
+				5A7162C9155143EC0055A10B /* ChartModel.m in Sources */,
+				5A7162CA155143EC0055A10B /* ColumnChartModel.m in Sources */,
+				5A7162CB155143EC0055A10B /* LineChartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
