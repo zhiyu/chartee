@@ -61,13 +61,13 @@
   {
 	    "name":"wr",
 		"label":"WR",
-		"type":"line",
+		"type":"area",
 		"section":"2",
 		"yAxis":"0",
-		"color":"255,255,255",
-		"negativeColor":"255,255,255",
-		"selectedColor":"255,255,255",
-		"negativeSelectedColor":"255,255,255"
+         "color":"250,232,115",
+         "negativeColor":"250,232,115",
+         "selectedColor":"250,232,115",
+         "negativeSelectedColor":"250,232,115"
   },
   {
 	    "name":"vr",

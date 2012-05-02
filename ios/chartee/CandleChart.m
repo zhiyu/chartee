@@ -340,6 +340,7 @@
 			float low   = [[[data objectAtIndex:i] objectAtIndex:3] floatValue];
 			float open  = [[[data objectAtIndex:i] objectAtIndex:0] floatValue];
 			float close = [[[data objectAtIndex:i] objectAtIndex:1] floatValue];
+            
 			float ix  = sec.frame.origin.x+sec.paddingLeft+(i-self.rangeFrom)*plotWidth;
 			float iNx = sec.frame.origin.x+sec.paddingLeft+(i+1-self.rangeFrom)*plotWidth;
 			float iyo = [self getLocalY:open withSection:section withAxis:yAxis];

@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "YAxis.h"
 #import "Section.h"
+#import "ChartModel.h"
+#import "LineChartModel.h"
+#import "AreaChartModel.h"
+#import "ColumnChartModel.h"
+
+@class ChartModel;
 
 @interface Chart : UIView {
 	bool  enableSelection;
@@ -32,6 +38,7 @@
 	NSMutableArray *series;
 	NSMutableArray *sections;
 	NSMutableArray *ratios;
+    NSMutableDictionary *models;
 	UIColor        *borderColor;
 	NSString       *title;
 }
@@ -57,6 +64,7 @@
 @property (nonatomic,retain) NSMutableArray *series;
 @property (nonatomic,retain) NSMutableArray *sections;
 @property (nonatomic,retain) NSMutableArray  *ratios;
+@property (nonatomic,retain) NSMutableDictionary *models;
 @property (nonatomic,retain) UIColor  *borderColor;
 @property (nonatomic,retain) NSString *title;
 
@@ -68,13 +76,15 @@
 -(void)initChart;
 -(void)initXAxis;
 -(void)initYAxis;
+-(void)initModels;
+-(void)addModel:(ChartModel *)model withName:(NSString *)name;
+-(ChartModel *)getModel:(NSString *)name;
 
 /* draw */
 -(void)drawChart;
 -(void)drawXAxis;
 -(void)drawYAxis;
 -(void)drawSerie:(NSMutableDictionary *)serie;
--(void)drawTips:(NSMutableDictionary *)serie;
 -(void)drawLabels;
 -(void)setLabel:(NSMutableArray *)label forSerie:(NSMutableDictionary *) serie;
 

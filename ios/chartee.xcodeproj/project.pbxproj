@@ -45,6 +45,7 @@
 		5A3FC93314AAFD5300DD3BE2 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FC8EF14AAFD5300DD3BE2 /* SBJsonTokeniser.m */; };
 		5A3FC93414AAFD5300DD3BE2 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FC8F114AAFD5300DD3BE2 /* SBJsonUTF8Stream.m */; };
 		5A3FC93514AAFD5300DD3BE2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3FC8F314AAFD5300DD3BE2 /* SBJsonWriter.m */; };
+		5A71628F155133940055A10B /* CandleChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71628E155133940055A10B /* CandleChartModel.m */; };
 		5A8BFAD214AD5D6800B490CF /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8BFACC14AD5D6800B490CF /* Icon-72.png */; };
 		5A8BFAD314AD5D6800B490CF /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8BFACD14AD5D6800B490CF /* Icon-Small-50.png */; };
 		5A8BFAD414AD5D6800B490CF /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8BFACE14AD5D6800B490CF /* Icon-Small.png */; };
@@ -66,6 +67,10 @@
 		5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0AE14AC737E000A1BBA /* Chart.m */; };
 		5A8FA0B514AC737E000A1BBA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B014AC737E000A1BBA /* Section.m */; };
 		5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B214AC737E000A1BBA /* YAxis.m */; };
+		5AED861C155127E4004C0DEE /* LineChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED861B155127E4004C0DEE /* LineChartModel.m */; };
+		5AED861F155129AD004C0DEE /* AreaChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED861E155129AD004C0DEE /* AreaChartModel.m */; };
+		5AED8622155129BB004C0DEE /* ColumnChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED8621155129BB004C0DEE /* ColumnChartModel.m */; };
+		5AED862515512B19004C0DEE /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AED862415512B19004C0DEE /* ChartModel.m */; };
 		5AEFEF5A148E255D00453B4F /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFEF59148E255D00453B4F /* NSString.m */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +150,8 @@
 		5A3FC8F214AAFD5300DD3BE2 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		5A3FC8F314AAFD5300DD3BE2 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		5A5FFC3014AD4CFD000B3CC3 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		5A71628D155133940055A10B /* CandleChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CandleChartModel.h; path = classes/CandleChartModel.h; sourceTree = SOURCE_ROOT; };
+		5A71628E155133940055A10B /* CandleChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CandleChartModel.m; path = classes/CandleChartModel.m; sourceTree = SOURCE_ROOT; };
 		5A8BFACC14AD5D6800B490CF /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		5A8BFACD14AD5D6800B490CF /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		5A8BFACE14AD5D6800B490CF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -170,6 +177,14 @@
 		5A8FA0B014AC737E000A1BBA /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Section.m; path = chartee/Section.m; sourceTree = SOURCE_ROOT; };
 		5A8FA0B114AC737E000A1BBA /* YAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAxis.h; path = chartee/YAxis.h; sourceTree = SOURCE_ROOT; };
 		5A8FA0B214AC737E000A1BBA /* YAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAxis.m; path = chartee/YAxis.m; sourceTree = SOURCE_ROOT; };
+		5AED861715512719004C0DEE /* ChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartModel.h; path = classes/ChartModel.h; sourceTree = SOURCE_ROOT; };
+		5AED861A155127E4004C0DEE /* LineChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChartModel.h; path = classes/LineChartModel.h; sourceTree = SOURCE_ROOT; };
+		5AED861B155127E4004C0DEE /* LineChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineChartModel.m; path = classes/LineChartModel.m; sourceTree = SOURCE_ROOT; };
+		5AED861D155129AD004C0DEE /* AreaChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaChartModel.h; path = classes/AreaChartModel.h; sourceTree = SOURCE_ROOT; };
+		5AED861E155129AD004C0DEE /* AreaChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaChartModel.m; path = classes/AreaChartModel.m; sourceTree = SOURCE_ROOT; };
+		5AED8620155129BB004C0DEE /* ColumnChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColumnChartModel.h; path = classes/ColumnChartModel.h; sourceTree = SOURCE_ROOT; };
+		5AED8621155129BB004C0DEE /* ColumnChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColumnChartModel.m; path = classes/ColumnChartModel.m; sourceTree = SOURCE_ROOT; };
+		5AED862415512B19004C0DEE /* ChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartModel.m; path = classes/ChartModel.m; sourceTree = SOURCE_ROOT; };
 		5AEFEF58148E255D00453B4F /* NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString.h; sourceTree = "<group>"; };
 		5AEFEF59148E255D00453B4F /* NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,6 +288,7 @@
 		5A3F8203145E3557004EAF87 /* chartee */ = {
 			isa = PBXGroup;
 			children = (
+				5AED861615512435004C0DEE /* model */,
 				5A8FA0AB14AC737E000A1BBA /* CandleChart.h */,
 				5A8FA0AC14AC737E000A1BBA /* CandleChart.m */,
 				5A8FA0AD14AC737E000A1BBA /* Chart.h */,
@@ -406,6 +422,23 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		5AED861615512435004C0DEE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5AED861715512719004C0DEE /* ChartModel.h */,
+				5AED862415512B19004C0DEE /* ChartModel.m */,
+				5AED861A155127E4004C0DEE /* LineChartModel.h */,
+				5AED861B155127E4004C0DEE /* LineChartModel.m */,
+				5AED861D155129AD004C0DEE /* AreaChartModel.h */,
+				5AED861E155129AD004C0DEE /* AreaChartModel.m */,
+				5AED8620155129BB004C0DEE /* ColumnChartModel.h */,
+				5AED8621155129BB004C0DEE /* ColumnChartModel.m */,
+				5A71628D155133940055A10B /* CandleChartModel.h */,
+				5A71628E155133940055A10B /* CandleChartModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -517,6 +550,11 @@
 				5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */,
 				5A8FA0B514AC737E000A1BBA /* Section.m in Sources */,
 				5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */,
+				5AED861C155127E4004C0DEE /* LineChartModel.m in Sources */,
+				5AED861F155129AD004C0DEE /* AreaChartModel.m in Sources */,
+				5AED8622155129BB004C0DEE /* ColumnChartModel.m in Sources */,
+				5AED862515512B19004C0DEE /* ChartModel.m in Sources */,
+				5A71628F155133940055A10B /* CandleChartModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +579,7 @@
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "chartee-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ws-fdysjesoiefttyghptgrirvmbysu/Build/Products/Debug-iphoneos\"",
@@ -573,7 +611,7 @@
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "chartee-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ws-fdysjesoiefttyghptgrirvmbysu/Build/Products/Debug-iphoneos\"",
