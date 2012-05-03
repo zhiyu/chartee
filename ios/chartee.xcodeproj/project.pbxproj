@@ -67,7 +67,6 @@
 		5A8FA0A314AC710B000A1BBA /* pad_k1w.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FA09A14AC710B000A1BBA /* pad_k1w.png */; };
 		5A8FA0A614AC7113000A1BBA /* indicators.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FA0A414AC7113000A1BBA /* indicators.json */; };
 		5A8FA0A714AC7113000A1BBA /* securities.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A8FA0A514AC7113000A1BBA /* securities.json */; };
-		5A8FA0B314AC737E000A1BBA /* CandleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0AC14AC737E000A1BBA /* CandleChart.m */; };
 		5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0AE14AC737E000A1BBA /* Chart.m */; };
 		5A8FA0B514AC737E000A1BBA /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B014AC737E000A1BBA /* Section.m */; };
 		5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FA0B214AC737E000A1BBA /* YAxis.m */; };
@@ -177,8 +176,6 @@
 		5A8FA09A14AC710B000A1BBA /* pad_k1w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pad_k1w.png; path = resource/pad_k1w.png; sourceTree = "<group>"; };
 		5A8FA0A414AC7113000A1BBA /* indicators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = indicators.json; path = resource/indicators.json; sourceTree = "<group>"; };
 		5A8FA0A514AC7113000A1BBA /* securities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = securities.json; path = resource/securities.json; sourceTree = "<group>"; };
-		5A8FA0AB14AC737E000A1BBA /* CandleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CandleChart.h; path = chartee/CandleChart.h; sourceTree = SOURCE_ROOT; };
-		5A8FA0AC14AC737E000A1BBA /* CandleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CandleChart.m; path = chartee/CandleChart.m; sourceTree = SOURCE_ROOT; };
 		5A8FA0AD14AC737E000A1BBA /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chart.h; path = chartee/Chart.h; sourceTree = SOURCE_ROOT; };
 		5A8FA0AE14AC737E000A1BBA /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chart.m; path = chartee/Chart.m; sourceTree = SOURCE_ROOT; };
 		5A8FA0AF14AC737E000A1BBA /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Section.h; path = chartee/Section.h; sourceTree = SOURCE_ROOT; };
@@ -289,8 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				5AED861615512435004C0DEE /* model */,
-				5A8FA0AB14AC737E000A1BBA /* CandleChart.h */,
-				5A8FA0AC14AC737E000A1BBA /* CandleChart.m */,
 				5A8FA0AD14AC737E000A1BBA /* Chart.h */,
 				5A8FA0AE14AC737E000A1BBA /* Chart.m */,
 				5A8FA0AF14AC737E000A1BBA /* Section.h */,
@@ -546,7 +541,6 @@
 				5A3FC93314AAFD5300DD3BE2 /* SBJsonTokeniser.m in Sources */,
 				5A3FC93414AAFD5300DD3BE2 /* SBJsonUTF8Stream.m in Sources */,
 				5A3FC93514AAFD5300DD3BE2 /* SBJsonWriter.m in Sources */,
-				5A8FA0B314AC737E000A1BBA /* CandleChart.m in Sources */,
 				5A8FA0B414AC737E000A1BBA /* Chart.m in Sources */,
 				5A8FA0B514AC737E000A1BBA /* Section.m in Sources */,
 				5A8FA0B614AC737E000A1BBA /* YAxis.m in Sources */,

@@ -61,7 +61,7 @@
 	[self.view addSubview:searchBar];
 	
 	//candleChart
-	self.candleChart = [[CandleChart alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height-80)];
+	self.candleChart = [[Chart alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height-80)];
 	[self.view addSubview:candleChart];
 	
 	//candleChart freqView

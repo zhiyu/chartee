@@ -5,13 +5,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CandleChart.h"
+#import "Chart.h"
 #import <QuartzCore/QuartzCore.h>
 #import "YAxis.h"
 #import "AutoCompleteDelegate.h"
 
 @interface CandleViewController : UIViewController<UISearchBarDelegate> {
-	CandleChart *candleChart;
+	Chart *candleChart;
 	UITableView *autoCompleteView;
 	UIView *toolBar;
 	UIView *candleChartFreqView;
@@ -28,7 +28,7 @@
 	NSString *req_security_id;
 }
 
-@property (nonatomic,retain) CandleChart *candleChart;
+@property (nonatomic,retain) Chart *candleChart;
 @property (nonatomic,retain) UITableView *autoCompleteView;
 @property (nonatomic,retain) UIView *toolBar;
 @property (nonatomic,retain) UIView *candleChartFreqView;

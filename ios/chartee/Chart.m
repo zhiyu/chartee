@@ -74,7 +74,10 @@
 	if(self.series!=nil){
 		self.plotCount = [[[[self series] objectAtIndex:0] objectForKey:@"data"] count];
 	}
-	
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetRGBFillColor(context, 0, 0, 0, 1.0); 
+    CGContextFillRect (context, CGRectMake (0, 0, self.bounds.size.width,self.bounds.size.height)); 
 }
 
 -(void)reset{
@@ -165,7 +168,7 @@
 }
 
 -(void)drawChart{
-	for(int secIndex=0;secIndex<self.sections.count;secIndex++){
+    for(int secIndex=0;secIndex<self.sections.count;secIndex++){
 		Section *sec = [self.sections objectAtIndex:secIndex];
 		if(sec.hidden){
 		    continue;
@@ -261,10 +264,12 @@
     ChartModel *model = [self getModel:type];
     [model drawSerie:self serie:serie];	
     
-    [self drawTips:serie];
-}
-
--(void)drawTips:(NSMutableDictionary *)serie{
+    NSEnumerator *enumerator = [self.models keyEnumerator];  
+    id key;  
+    while ((key = [enumerator nextObject])){  
+        ChartModel *m = [self.models objectForKey:key];
+        [m drawTips:self serie:serie];
+    }
 }
 
 -(void)drawYAxis{
@@ -655,6 +660,12 @@
     model = [[ColumnChartModel alloc] init];
     [self addModel:model withName:@"column"];
     [model release];
+    
+    //candle
+    model = [[CandleChartModel alloc] init];
+    [self addModel:model withName:@"candle"];
+    [model release];
+
 }
 
 -(void)addModel:(ChartModel *)model withName:(NSString *)name{
@@ -664,6 +675,7 @@
 -(ChartModel *)getModel:(NSString *)name{
     return [self.models objectForKey:name];
 }
+
 - (void)drawRect:(CGRect)rect {
 	[self initChart];
 	[self initSections];
