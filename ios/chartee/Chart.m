@@ -260,6 +260,11 @@
     NSString   *type  = [serie objectForKey:@"type"];
     ChartModel *model = [self getModel:type];
     [model drawSerie:self serie:serie];	
+    
+    [self drawTips:serie];
+}
+
+-(void)drawTips:(NSMutableDictionary *)serie{
 }
 
 -(void)drawYAxis{
