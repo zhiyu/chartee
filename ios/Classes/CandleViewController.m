@@ -326,6 +326,13 @@
 			}
 		}
 	}
+    
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration = 10.0;
+    pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+    pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+    [self.candleChart addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+    
 }
 
 -(void)setOptions:(NSDictionary *)options ForSerie:(NSMutableDictionary *)serie;{
