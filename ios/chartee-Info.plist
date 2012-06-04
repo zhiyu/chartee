@@ -22,7 +22,7 @@
 	<key>CFBundleIconFile~ipad</key>
 	<string>Icon-72.png</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.zzy.app.chartee</string>
+	<string>com.tetuu.chartee</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
