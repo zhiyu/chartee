@@ -7,6 +7,7 @@
 #import "CandleViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ResourceHelper.h"
+#import "JSONKit.h"
 
 @implementation CandleViewController
 
@@ -37,14 +38,51 @@
 	self.tradeStatus= 1;
 	self.req_freq   = @"d";
 	self.req_type   = @"H";
-	self.req_url    = @"http://ichart.yahoo.com/table.csv?s=%@&&g=%@";
-	
+	self.req_url    = @"http://ichart.yahoo.com/table.csv?s=%@&g=%@";
 	
 	[self.view setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)];
-	self.view.backgroundColor = [[UIColor alloc] initWithRed:0.8 green:0.8 blue:0.8 alpha:1];
+
+    
+	//candleChart
+	self.candleChart = [[Chart alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height-40)];
+	[self.view addSubview:candleChart];
+    
+    //toolbar
+	self.toolBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
+	[self.toolBar release];
+    
+    [self.view addSubview:toolBar];
+	//status bar
+	self.status = [[UILabel alloc] initWithFrame:CGRectMake(220, 0, 200, 40)];
+	[self.status release];
+	self.status.font = [UIFont systemFontOfSize:14];
+	self.status.backgroundColor = [UIColor clearColor];
+    self.status.textColor = [UIColor whiteColor];
+	[self.toolBar addSubview:status];
+	
+    
+	UIImage *btnImg = [[ResourceHelper loadImage:@"candle_chart"] retain];
+	UIImage *btnImgBg = [[ResourceHelper loadImage:[@"candle_chart" stringByAppendingFormat:@"_%@",@"selected"]] retain];
+	UIButton *btn = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+	btn.tag = 2;
+	[btn setFrame:CGRectMake(0,0, 80, 40)];
+	[btn setImage:btnImg forState:UIControlStateNormal];
+	[btn setImage:btnImgBg forState:UIControlStateSelected];
+	[btn addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+	[self.toolBar addSubview:btn];
+	[btn release];
+	[btnImg release];
+    
+    UILabel *link = [[UILabel alloc] initWithFrame:CGRectMake(self.toolBar.frame.size.width/2-130, 0, 260, 40)];
+	link.font     = [UIFont systemFontOfSize:14];
+    link.backgroundColor = [UIColor clearColor];
+    link.textColor = [UIColor grayColor];
+    link.text     = @"©2011 https://github.com/zhiyu/chartee";
+	[self.toolBar addSubview:link];
+	
     
 	//search bar
-	UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(self.view.frame.size.width-250, 0, 250, 40)];
+	UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(self.toolBar.frame.size.width-250, 0, 250, 40)];
 	[searchBar setBackgroundColor:[[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0]];
 	searchBar.delegate = self;
 	
@@ -58,20 +96,17 @@
 	searchBar.placeholder = @"enter security";
 	searchBar.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 	searchBar.autocapitalizationType = NO;
-	[self.view addSubview:searchBar];
-	
-	//candleChart
-	self.candleChart = [[Chart alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height-80)];
-	[self.view addSubview:candleChart];
-	
-	//candleChart freqView
-	self.candleChartFreqView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, 120, 120)];
-	[self.candleChartFreqView setBackgroundColor:[[UIColor alloc] initWithRed:148/255.f green:148/255.f blue:148/255.f alpha:1]];
+	[self.toolBar addSubview:searchBar];
+
+    
+    //candleChart freqView
+	self.candleChartFreqView = [[UIView alloc] initWithFrame:CGRectMake(80, -160, 120, 120)];
+	[self.candleChartFreqView setBackgroundColor:[[UIColor alloc] initWithRed:0/255.f green:0/255.f blue:255/255.f alpha:1]];
 	[self.candleChartFreqView release];
-	
-	UIImage *btnImg = [[ResourceHelper loadImage:@"k1d"] retain];
-	UIImage *btnImgBg = [[ResourceHelper loadImage:[@"k1d" stringByAppendingFormat:@"_%@",@"selected"]] retain];
-	UIButton *btn = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+
+    btnImg = [[ResourceHelper loadImage:@"k1d"] retain];
+    btnImgBg = [[ResourceHelper loadImage:[@"k1d" stringByAppendingFormat:@"_%@",@"selected"]] retain];
+    btn = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
 	btn.tag = 26;
 	[btn setFrame:CGRectMake(0,0, 120, 40)];
 	[btn setImage:btnImg forState:UIControlStateNormal];
@@ -110,46 +145,6 @@
 	
 	[self.view addSubview:candleChartFreqView];
 	
-	//toolbar
-	self.toolBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, self.view.frame.size.width, 40)];
-	[self.toolBar release];
-	
-	//status bar
-	self.status = [[UILabel alloc] initWithFrame:CGRectMake(70, 0, 200, 40)];
-	[self.status release];
-	self.status.font = [UIFont systemFontOfSize:14];
-	self.status.backgroundColor = [UIColor clearColor];
-	[self.toolBar addSubview:status];
-	
-    toolBar.backgroundColor = [[UIColor alloc] initWithRed:0.8 green:0.8 blue:0.8 alpha:1];
-	[self.view addSubview:toolBar];
-	[toolBar release];
-
-	
-	btnImg = [[ResourceHelper loadImage:@"candle_chart"] retain];
-	btnImgBg = [[ResourceHelper loadImage:[@"candle_chart" stringByAppendingFormat:@"_%@",@"selected"]] retain];
-	btn = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
-	btn.tag = 2;
-	[btn setFrame:CGRectMake(0,0, 60, 40)];
-	[btn setImage:btnImg forState:UIControlStateNormal];
-	[btn setImage:btnImgBg forState:UIControlStateSelected];
-	[btn addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-	[self.toolBar addSubview:btn];
-	[btn release];
-	[btnImg release];
-    
-    //logo and link
-    UILabel *logo = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 200, 40)];
-	logo.font     = [UIFont systemFontOfSize:16];
-    logo.backgroundColor = [UIColor clearColor];
-    logo.text     = @"Chartee";
-	[self.view addSubview:logo];
-    
-    UILabel *link = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width-260, self.view.frame.size.height-40, 260, 40)];
-	link.font     = [UIFont systemFontOfSize:14];
-    link.backgroundColor = [UIColor clearColor];
-    link.text     = @"©2011 https://github.com/zhiyu/chartee";
-	[self.view addSubview:link];
     
     //init chart
     [self initChart];
@@ -305,7 +300,7 @@
 	NSString *indicatorsString =[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"indicators" ofType:@"json"] encoding:NSUTF8StringEncoding error:nil];
     
 	if(indicatorsString != nil){
-		NSArray *indicators = [indicatorsString JSONValue];
+		NSArray *indicators = [indicatorsString objectFromJSONString];
 		for(NSObject *indicator in indicators){
 			if([indicator isKindOfClass:[NSArray class]]){
 				NSMutableArray *arr = [[NSMutableArray alloc] init];
@@ -357,7 +352,7 @@
 		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 		[UIView setAnimationDuration:0.3];
 		CGRect rect = [self.candleChartFreqView frame];
-		rect.origin.y =  self.view.frame.size.width - 40;
+		rect.origin.y =  - 160;
 		[self.candleChartFreqView setFrame:rect];
 		[UIView commitAnimations];
 	}
@@ -388,11 +383,11 @@
 			[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 			[UIView setAnimationDuration:0.3];
 			CGRect rect = [self.candleChartFreqView frame];
-			if(rect.origin.y == self.view.frame.size.width - 40){
-				rect.origin.y =  self.view.frame.size.width - 160;
+			if(rect.origin.y == 0){
+				rect.origin.y = - 160;
 				[self.candleChartFreqView setFrame:rect];
 			}else{
-				rect.origin.y =  self.view.frame.size.width - 40;
+				rect.origin.y =  0;
 				[self.candleChartFreqView setFrame:rect];
                 btn.selected = NO;
                 sel.selected = NO;
@@ -519,12 +514,12 @@
 
 -(void)getAutoCompleteData{	
     NSString *securities =[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"securities" ofType:@"json"] encoding:NSUTF8StringEncoding error:nil];
-    NSMutableArray *data = [securities JSONValue];
+    NSMutableArray *data = [securities mutableObjectFromJSONString];
     self.autoCompleteDelegate.items = data;
 }
 
 -(void)getData{
-	self.status.text = @"Loading data...";
+	self.status.text = @"Loading...";
 	if(chartMode == 0){
 		[self.candleChart getSection:2].hidden = YES;
 	}else{
