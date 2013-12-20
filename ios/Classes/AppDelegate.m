@@ -19,7 +19,8 @@
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     
     CandleViewController *contentViewController = [[CandleViewController alloc] init];
-	[window addSubview:contentViewController.view];
+	window.rootViewController = contentViewController;
+    [contentViewController release];
 
     [self.window makeKeyAndVisible];
 	return YES;

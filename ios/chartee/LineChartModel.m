@@ -41,7 +41,9 @@
         CGContextSetShouldAntialias(context, YES);
         CGContextBeginPath(context); 
         CGContextSetRGBFillColor(context, R, G, B, 1.0);
-        CGContextAddArc(context, sec.frame.origin.x+sec.paddingLeft+(chart.selectedIndex-chart.rangeFrom)*chart.plotWidth+chart.plotWidth/2, [chart getLocalY:value withSection:section withAxis:yAxis], 3, 0, 2*M_PI, 1);
+        if(!isnan([chart getLocalY:value withSection:section withAxis:yAxis])){
+            CGContextAddArc(context, sec.frame.origin.x+sec.paddingLeft+(chart.selectedIndex-chart.rangeFrom)*chart.plotWidth+chart.plotWidth/2, [chart getLocalY:value withSection:section withAxis:yAxis], 3, 0, 2*M_PI, 1);
+        }
         CGContextFillPath(context); 
     }
     
@@ -60,7 +62,12 @@
             float iy = [chart getLocalY:value withSection:section withAxis:yAxis];				
             CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:R green:G blue:B alpha:1.0].CGColor);
             CGContextMoveToPoint(context, ix+chart.plotWidth/2, iy);
-            CGContextAddLineToPoint(context, iNx+chart.plotWidth/2,[chart getLocalY:([[[data objectAtIndex:(i+1)] objectAtIndex:0] floatValue]) withSection:section withAxis:yAxis]);
+            
+            float y = [chart getLocalY:([[[data objectAtIndex:(i+1)] objectAtIndex:0] floatValue]) withSection:section withAxis:yAxis];
+            if(!isnan(y)){
+                CGContextAddLineToPoint(context, iNx+chart.plotWidth/2, y);
+            }
+            
             CGContextStrokePath(context);
         }	
     }

@@ -54,7 +54,9 @@
         CGContextSetShouldAntialias(context, YES);
         CGContextBeginPath(context);
         CGContextSetRGBFillColor(context, R, G, B, 1.0);
-        CGContextAddArc(context, sec.frame.origin.x+sec.paddingLeft+(chart.selectedIndex-chart.rangeFrom)*chart.plotWidth+chart.plotWidth/2, [chart getLocalY:value withSection:section withAxis:yAxis], 3, 0, 2*M_PI, 1);
+        if(!isnan([chart getLocalY:value withSection:section withAxis:yAxis])){
+            CGContextAddArc(context, sec.frame.origin.x+sec.paddingLeft+(chart.selectedIndex-chart.rangeFrom)*chart.plotWidth+chart.plotWidth/2, [chart getLocalY:value withSection:section withAxis:yAxis], 3, 0, 2*M_PI, 1);
+        }
         CGContextFillPath(context);
     }
     

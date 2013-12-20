@@ -305,15 +305,19 @@
 			float baseY = [self getLocalY:yaxis.baseValue withSection:secIndex withAxis:aIndex];
 			CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:0.2 green:0.2 blue:0.2 alpha:1.0].CGColor);
 			CGContextMoveToPoint(context,sec.frame.origin.x+sec.paddingLeft,baseY);
-			CGContextAddLineToPoint(context,sec.frame.origin.x+sec.paddingLeft-2,baseY);
-			CGContextStrokePath(context);
+            if(!isnan(baseY)){
+                CGContextAddLineToPoint(context, sec.frame.origin.x+sec.paddingLeft-2, baseY);
+            }
+            CGContextStrokePath(context);
 			
 			[[@"" stringByAppendingFormat:format,yaxis.baseValue] drawAtPoint:CGPointMake(sec.frame.origin.x-1,baseY-7) withFont:[UIFont systemFontOfSize: 12]];
 			
 			CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:0.15 green:0.15 blue:0.15 alpha:1.0].CGColor);
 			CGContextMoveToPoint(context,sec.frame.origin.x+sec.paddingLeft,baseY);
-			CGContextAddLineToPoint(context,sec.frame.origin.x+sec.frame.size.width,baseY);
-		
+			if(!isnan(baseY)){
+                CGContextAddLineToPoint(context,sec.frame.origin.x+sec.frame.size.width,baseY);
+            }
+            
 			if (yaxis.tickInterval%2 == 1) {
 				yaxis.tickInterval +=1;
 			}
@@ -325,8 +329,10 @@
 					
 					CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:0.2 green:0.2 blue:0.2 alpha:1.0].CGColor);
 					CGContextMoveToPoint(context,sec.frame.origin.x+sec.paddingLeft,iy);
-					CGContextAddLineToPoint(context,sec.frame.origin.x+sec.paddingLeft-2,iy);
-					CGContextStrokePath(context);
+					if(!isnan(iy)){
+                        CGContextAddLineToPoint(context,sec.frame.origin.x+sec.paddingLeft-2,iy);
+					}
+                    CGContextStrokePath(context);
 					
 					[[@"" stringByAppendingFormat:format,yaxis.baseValue+i*step] drawAtPoint:CGPointMake(sec.frame.origin.x-1,iy-7) withFont:[UIFont systemFontOfSize: 12]];
 					
@@ -345,8 +351,10 @@
 					
 					CGContextSetStrokeColorWithColor(context, [[UIColor alloc] initWithRed:0.2 green:0.2 blue:0.2 alpha:1.0].CGColor);
 					CGContextMoveToPoint(context,sec.frame.origin.x+sec.paddingLeft,iy);
-					CGContextAddLineToPoint(context,sec.frame.origin.x+sec.paddingLeft-2,iy);
-					CGContextStrokePath(context);
+					if(!isnan(iy)){
+                        CGContextAddLineToPoint(context,sec.frame.origin.x+sec.paddingLeft-2,iy);
+					}
+                    CGContextStrokePath(context);
 					
 					[[@"" stringByAppendingFormat:format,yaxis.baseValue-i*step] drawAtPoint:CGPointMake(sec.frame.origin.x-1,iy-7) withFont:[UIFont systemFontOfSize: 12]];
 					
