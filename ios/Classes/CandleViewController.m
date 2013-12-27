@@ -85,13 +85,11 @@
 	UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(self.toolBar.frame.size.width-250, 0, 250, 40)];
 	[searchBar setBackgroundColor:[[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0]];
 	searchBar.delegate = self;
-	
-	UIView *segment = [searchBar.subviews objectAtIndex:0];
-	[segment removeFromSuperview];
-	
-	UITextField *searchField = [[searchBar subviews] lastObject];
-	[searchField setReturnKeyType:UIReturnKeyDone];
-	
+    
+    if ([searchBar respondsToSelector:@selector(barTintColor)]) {
+        [searchBar setBarTintColor:[UIColor clearColor]];
+    }
+    
 	searchBar.barStyle = UIBarStyleBlackTranslucent;
 	searchBar.placeholder = @"enter security";
 	searchBar.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
