@@ -695,13 +695,13 @@
 }
 
 - (void)dealloc {
-    [super dealloc];
-	[borderColor release];	
-	[padding release];
-	[series release];
-	[title release];
-	[sections release];
-	[ratios release];
+      [borderColor release];	
+      [padding release];
+      [series release];
+      [title release];
+      [sections release];
+      [ratios release];
+      [super dealloc];
 }
 
 #pragma mark -
