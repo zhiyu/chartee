@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
+               BlueprintIdentifier = "26839F4C1B919AAE008FD788"
                BuildableName = "chartee.app"
                BlueprintName = "chartee"
+               ReferencedContainer = "container:chartee.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26839F651B919AAF008FD788"
+               BuildableName = "charteeTests.xctest"
+               BlueprintName = "charteeTests"
                ReferencedContainer = "container:chartee.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,11 +42,21 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26839F651B919AAF008FD788"
+               BuildableName = "charteeTests.xctest"
+               BlueprintName = "charteeTests"
+               ReferencedContainer = "container:chartee.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
+            BlueprintIdentifier = "26839F4C1B919AAE008FD788"
             BuildableName = "chartee.app"
             BlueprintName = "chartee"
             ReferencedContainer = "container:chartee.xcodeproj">
@@ -48,10 +72,11 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
+            BlueprintIdentifier = "26839F4C1B919AAE008FD788"
             BuildableName = "chartee.app"
             BlueprintName = "chartee"
             ReferencedContainer = "container:chartee.xcodeproj">
@@ -66,10 +91,11 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
+            BlueprintIdentifier = "26839F4C1B919AAE008FD788"
             BuildableName = "chartee.app"
             BlueprintName = "chartee"
             ReferencedContainer = "container:chartee.xcodeproj">

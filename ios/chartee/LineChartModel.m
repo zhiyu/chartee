@@ -138,17 +138,14 @@
         NSString *fmt = [@"%@:" stringByAppendingFormat:@"%@",format];
         [l appendFormat:fmt,lbl,value];
         [tmp setObject:l forKey:@"text"];
-        [l release];
         
         NSMutableString *clr = [[NSMutableString alloc] init];
         [clr appendFormat:@"%f,",R];
         [clr appendFormat:@"%f,",G];
         [clr appendFormat:@"%f",B];
         [tmp setObject:clr forKey:@"color"];
-        [clr release];
         
         [label addObject:tmp];
-        [tmp release];
     }	    
 }
 

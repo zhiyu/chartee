@@ -43,6 +43,10 @@
 	CGRect fra = sec.frame;
 	float  max = yaxis.max;
 	float  min = yaxis.min;
+    
+    if (max == min) {
+        return 0;
+    }
     return fra.size.height - (fra.size.height-sec.paddingTop)* (val-min)/(max-min)+fra.origin.y;
 }
 
@@ -99,11 +103,12 @@
 	
 	for(int secIndex=0;secIndex<[self.sections count];secIndex++){
 		Section *sec = [self.sections objectAtIndex:secIndex];
-		if(sec.paging){
+		if(sec.paging && [[sec series] count] > 0){
 			NSObject *serie = [[sec series] objectAtIndex:sec.selectedIndex];
 			if([serie isKindOfClass:[NSArray class]]){
-				for(int i=0;i<[serie count];i++){
-					[self setValuesForYAxis:[serie objectAtIndex:i]];
+                NSArray *se = (NSArray *)serie;
+				for(int i=0;i<[se count];i++){
+					[self setValuesForYAxis:[se objectAtIndex:i]];
 				}
 			}else {
 				[self setValuesForYAxis:serie];
@@ -112,8 +117,9 @@
 			for(int sIndex=0;sIndex<[sec.series count];sIndex++){
 				NSObject *serie = [[sec series] objectAtIndex:sIndex];
 				if([serie isKindOfClass:[NSArray class]]){
-					for(int i=0;i<[serie count];i++){
-						[self setValuesForYAxis:[serie objectAtIndex:i]];
+                    NSArray *se = (NSArray *)serie;
+					for(int i=0;i<[se count];i++){
+						[self setValuesForYAxis:[se objectAtIndex:i]];
 					}
 				}else {
 					[self setValuesForYAxis:serie];
@@ -184,8 +190,9 @@
 			if(sec.paging){
 				if (sec.selectedIndex == sIndex) {
 					if([serie isKindOfClass:[NSArray class]]){
-						for(int i=0;i<[serie count];i++){
-							[self drawSerie:[serie objectAtIndex:i]];
+                        NSArray *se = (NSArray *)serie;
+						for(int i=0;i<[se count];i++){
+							[self drawSerie:[se objectAtIndex:i]];
 						}
 					}else{
 						[self drawSerie:serie];
@@ -194,8 +201,9 @@
 				}
 			}else{
 				if([serie isKindOfClass:[NSArray class]]){
-					for(int i=0;i<[serie count];i++){
-						[self drawSerie:[serie objectAtIndex:i]];
+                    NSArray *se = (NSArray *)serie;
+					for(int i=0;i<[se count];i++){
+						[self drawSerie:[se objectAtIndex:i]];
 					}
 				}else{
 					[self drawSerie:serie];
@@ -221,8 +229,9 @@
 			if(sec.paging){
 				if (sec.selectedIndex == s) {
 					if([serie isKindOfClass:[NSArray class]]){
-						for(int i=0;i<[serie count];i++){
-							[self setLabel:label forSerie:[serie objectAtIndex:i]];
+                        NSArray *se = (NSArray *)serie;
+						for(int i=0;i<[se count];i++){
+							[self setLabel:label forSerie:[se objectAtIndex:i]];
 						}
 					}else{
 						[self setLabel:label forSerie:serie];
@@ -230,8 +239,9 @@
 				}
 			}else{
 				if([serie isKindOfClass:[NSArray class]]){
-					for(int i=0;i<[serie count];i++){
-						[self setLabel:label forSerie:[serie objectAtIndex:i]];
+                    NSArray *se = (NSArray *)serie;
+					for(int i=0;i<[se count];i++){
+						[self setLabel:label forSerie:[se objectAtIndex:i]];
 					}
 				}else{
 					[self setLabel:label forSerie:serie];
@@ -248,7 +258,6 @@
 				[text drawAtPoint:CGPointMake(sec.frame.origin.x+sec.paddingLeft+2+w,sec.frame.origin.y) withFont:[UIFont systemFontOfSize: 14]];
 				w += [text sizeWithFont:[UIFont systemFontOfSize:14]].width;
 			}
-			[label release];
 		}
 	}
 }
@@ -416,7 +425,6 @@
 			if([[self.series objectAtIndex:i] objectForKey:@"data"] == nil){
 				NSMutableArray *tempData = [[NSMutableArray alloc] init];
 			    [[self.series objectAtIndex:i] setObject:tempData forKey:@"data"];
-				[tempData release];
 			}
 			
 			for(int j=0;j<data.count;j++){
@@ -456,7 +464,6 @@
 			if([[self.series objectAtIndex:i] objectForKey:@"category"] == nil){
 				NSMutableArray *tempData = [[NSMutableArray alloc] init];
 			    [[self.series objectAtIndex:i] setObject:tempData forKey:@"category"];
-				[tempData release];
 			}
 			
 			for(int j=0;j<category.count;j++){
@@ -522,14 +529,16 @@
 
 -(void)addSerie:(NSObject *)serie{
 	if([serie isKindOfClass:[NSArray class]]){
+        NSArray *se = (NSArray *)serie;
 		int section = 0;
-	    for (NSDictionary *ser in serie) {
+	    for (NSDictionary *ser in se) {
 		    section = [[ser objectForKey:@"section"] intValue];
 			[self.series addObject:ser];
 		}
 		[[[self.sections objectAtIndex:section] series] addObject:serie];
 	}else{
-		int section = [[serie objectForKey:@"section"] intValue];
+        NSDictionary *se = (NSDictionary *)serie;
+		int section = [[se objectForKey:@"section"] intValue];
 		[self.series addObject:serie];
 		[[[self.sections objectAtIndex:section] series] addObject:serie];
 	}
@@ -539,12 +548,9 @@
  *  Chart Sections
  */ 
 -(void)addSection:(NSString *)ratio{
-	[ratio retain];
 	Section *sec = [[Section alloc] init];
     [self.sections addObject:sec];
-	[sec release];
 	[self.ratios addObject:ratio];
-	[ratio release];
 }
 
 -(void)removeSection:(int)index{
@@ -553,14 +559,11 @@
 }
 
 -(void)addSections:(int)num withRatios:(NSArray *)rats{
-	[rats retain];
 	for (int i=0; i< num; i++) {
 		Section *sec = [[Section alloc] init];
 		[self.sections addObject:sec];
-		[sec release];	
 		[self.ratios addObject:[rats objectAtIndex:i]];
 	}
-	[rats release];
 }
 
 -(void)removeSections{
@@ -634,16 +637,13 @@
 		self.touchFlag       = 0;
 		self.touchFlagTwo    = 0;
 		NSMutableArray *rats = [[NSMutableArray alloc] init];
-		self.ratios          = rats; 
-		[rats release];
+		self.ratios          = rats;
 		
 		NSMutableArray *secs = [[NSMutableArray alloc] init];
 		self.sections        = secs; 
-		[secs release];
-        
+		
         NSMutableDictionary *mods = [[NSMutableDictionary alloc] init];
 		self.models        = mods; 
-		[mods release];
 		
 		[self setMultipleTouchEnabled:YES];
         
@@ -657,22 +657,18 @@
     //line
     ChartModel *model = [[LineChartModel alloc] init];
     [self addModel:model withName:@"line"];
-    [model release];
     
     //area
     model = [[AreaChartModel alloc] init];
     [self addModel:model withName:@"area"];
-    [model release];
     
     //column
     model = [[ColumnChartModel alloc] init];
     [self addModel:model withName:@"column"];
-    [model release];
     
     //candle
     model = [[CandleChartModel alloc] init];
     [self addModel:model withName:@"candle"];
-    [model release];
 
 }
 
@@ -692,16 +688,6 @@
 	[self drawXAxis];
 	[self drawYAxis];
 	[self drawChart];
-}
-
-- (void)dealloc {
-      [borderColor release];	
-      [padding release];
-      [series release];
-      [title release];
-      [sections release];
-      [ratios release];
-      [super dealloc];
 }
 
 #pragma mark -

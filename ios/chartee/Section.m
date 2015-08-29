@@ -28,7 +28,6 @@
     YAxis *yaix = [[YAxis alloc] init];
 	yaix.pos = pos;
 	[self.yAxises addObject:yaix];
-	[yaix release];
 }
 
 -(void)removeYAxis:(int)index{
@@ -71,24 +70,13 @@
 		self.paddingBottom   = 0;
 		self.padding         = nil;
 		NSMutableArray *sers = [[NSMutableArray alloc] init];
-		self.series          = sers; 
-		[sers release];
+		self.series          = sers;
 		NSMutableArray *yas = [[NSMutableArray alloc] init];
-		self.yAxises        = yas; 
-		[yas release];
+		self.yAxises        = yas;
 		NSMutableArray *xas = [[NSMutableArray alloc] init];
-		self.xAxises        = xas; 
-		[xas release];
+		self.xAxises        = xas;
     }
 	return self;
-}
-
-- (void)dealloc {
-    [super dealloc];
-	[padding release];
-	[series release];
-	[yAxises release];
-	[xAxises release];
 }
 
 @end
