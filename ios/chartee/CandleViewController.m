@@ -292,9 +292,9 @@
     }
 
     CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    pathAnimation.duration = 10.0;
-    pathAnimation.fromValue = @0.0fF;
-    pathAnimation.toValue = @1.0fF;
+    pathAnimation.duration = 10.0/**/;
+    pathAnimation.fromValue = @0.0f;
+    pathAnimation.toValue = @1.0f;
     [self.candleChart.layer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
 
 }
@@ -448,7 +448,7 @@
     [self.autoCompleteView setFrame:rect];
     self.autoCompleteView.hidden = YES;
     if(![searchBar.text isEqualToString:@""]){
-        self.req_security_id = [[[[searchBar text] componentsSeparatedByString:@"（"] objectAtIndex:1] componentsSeparatedByString:@"）"][0];
+        self.req_security_id = [[[searchBar text] componentsSeparatedByString:@"（"][1] componentsSeparatedByString:@"）"][0];
         [self getData];
     }
 }
@@ -459,7 +459,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
-    self.req_security_id = [[[[searchBar text] componentsSeparatedByString:@"（"] objectAtIndex:1] componentsSeparatedByString:@"）"][0];
+    self.req_security_id = [[[searchBar text] componentsSeparatedByString:@"（"][1] componentsSeparatedByString:@"）"][0];
     [self getData];
 }
 

@@ -12,7 +12,7 @@
 
 @synthesize hidden;
 @synthesize isInitialized;
-@synthesize paging; 
+@synthesize paging;
 @synthesize selectedIndex;
 @synthesize frame;
 @synthesize paddingLeft;
@@ -44,7 +44,7 @@
 
 -(void)initYAxises{
     for(int i=0;i<[self.yAxises count];i++){
-	    [[self.yAxises objectAtIndex:i] setIsUsed:NO];
+	    [self.yAxises[i] setIsUsed:NO];
 	}
 }
 

@@ -114,7 +114,7 @@ static const NSUInteger kDomainSection = 1;
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
 #endif
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_3_2
-		NSValue *keyboardBoundsValue = [[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey];
+		NSValue *keyboardBoundsValue = [notification userInfo][UIKeyboardFrameEndUserInfoKey];
 #else
 		NSValue *keyboardBoundsValue = [[notification userInfo] objectForKey:UIKeyboardBoundsUserInfoKey];
 #endif
@@ -132,7 +132,7 @@ static const NSUInteger kDomainSection = 1;
 - (void)orientationChanged:(NSNotification *)notification
 {
 	[self showTitle];
-	
+
 	UIDeviceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
 	CGFloat angle = 0;
 	switch (o) {
@@ -172,7 +172,7 @@ static const NSUInteger kDomainSection = 1;
 	self.view.frame = (CGRect){ { f.origin.x, f.origin.y },self.view.frame.size};
     [UIView commitAnimations];
 }
-		 
+
 #pragma mark utilities
 
 - (UIViewController *)presentingController
@@ -181,7 +181,7 @@ static const NSUInteger kDomainSection = 1;
 		presentingController = [[ASIAutorotatingViewController alloc] initWithNibName:nil bundle:nil];
 
 		// Attach to the window, but don't interfere.
-		UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+		UIWindow *window = [[UIApplication sharedApplication] windows][0];
 		[window addSubview:[presentingController view]];
 		[[presentingController view] setFrame:CGRectZero];
 		[[presentingController view] setUserInteractionEnabled:NO];
@@ -192,9 +192,9 @@ static const NSUInteger kDomainSection = 1;
 
 - (UITextField *)textFieldInRow:(NSUInteger)row section:(NSUInteger)section
 {
-	return [[[[[self tableView] cellForRowAtIndexPath:
-			   [NSIndexPath indexPathForRow:row inSection:section]]
-			  contentView] subviews] objectAtIndex:0];
+	return [[[[self tableView] cellForRowAtIndexPath:
+			[NSIndexPath indexPathForRow:row inSection:section]]
+			contentView] subviews][0];
 }
 
 - (UITextField *)usernameField
@@ -239,8 +239,8 @@ static const NSUInteger kDomainSection = 1;
 
 - (void)showTitle
 {
-	UINavigationBar *navigationBar = [[[self view] subviews] objectAtIndex:0];
-	UINavigationItem *navItem = [[navigationBar items] objectAtIndex:0];
+	UINavigationBar *navigationBar = [[self view] subviews][0];
+	UINavigationItem *navItem = [navigationBar items][0];
 	if (UIInterfaceOrientationIsPortrait([[UIDevice currentDevice] orientation])) {
 		// Setup the title
 		if ([self type] == ASIProxyAuthenticationType) {
@@ -271,7 +271,7 @@ static const NSUInteger kDomainSection = 1;
 	[bar setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
 
 	UINavigationItem *navItem = [[[UINavigationItem alloc] init] autorelease];
-	bar.items = [NSArray arrayWithObject:navItem];
+	bar.items = @[navItem];
 
 	[[self view] addSubview:bar];
 
@@ -301,7 +301,7 @@ static const NSUInteger kDomainSection = 1;
 
 	// Force reload the table content, and focus the first field to show the keyboard
 	[[self tableView] reloadData];
-	[[[[[self tableView] cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]].contentView subviews] objectAtIndex:0] becomeFirstResponder];
+	[[[[self tableView] cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]].contentView subviews][0] becomeFirstResponder];
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_3_2
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -340,7 +340,7 @@ static const NSUInteger kDomainSection = 1;
 - (void)presentNextDialog
 {
 	if ([requestsNeedingAuthentication count]) {
-		ASIHTTPRequest *nextRequest = [requestsNeedingAuthentication objectAtIndex:0];
+		ASIHTTPRequest *nextRequest = requestsNeedingAuthentication[0];
 		[requestsNeedingAuthentication removeObjectAtIndex:0];
 		[[self class] presentAuthenticationDialogForRequest:nextRequest];
 	}
