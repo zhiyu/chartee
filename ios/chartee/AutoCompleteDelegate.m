@@ -24,9 +24,9 @@
     return 1;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{ 
-    return YES; 
-} 
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return NO;
@@ -34,12 +34,12 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [self.selectedItems count]; 
+	return [self.selectedItems count];
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   	
+
     static NSString *cellIdentifier = @"Cell";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
@@ -49,12 +49,12 @@
 		[[cell textLabel] setFont:[UIFont systemFontOfSize:16]];
 		cell.showsReorderControl=YES;
     }
-	
+
 	NSUInteger row=[indexPath row];
 	cell.textLabel.backgroundColor = [UIColor clearColor];
 
 	if (self.selectedItems!=nil) {
-	    cell.textLabel.text = [[[self.selectedItems objectAtIndex:row] objectAtIndex:1] stringByAppendingFormat:@"   %@",[[self.selectedItems objectAtIndex:row] objectAtIndex:0]];
+	    cell.textLabel.text = [[self.selectedItems[row] objectAtIndex:1] stringByAppendingFormat:@"   %@", [self.selectedItems[row] objectAtIndex:0]];
 	}else {
 		cell.textLabel.text = @"正在加载数据...";
 	}
@@ -69,9 +69,9 @@
 	}
 }
 
--(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{ 
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
-	self.searchBar.text = [[[self.selectedItems objectAtIndex:row] objectAtIndex:1] stringByAppendingFormat:@"（%@）",[[self.selectedItems objectAtIndex:row] objectAtIndex:0]];
+	self.searchBar.text = [[self.selectedItems[row] objectAtIndex:1] stringByAppendingFormat:@"（%@）", [self.selectedItems[row] objectAtIndex:0]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

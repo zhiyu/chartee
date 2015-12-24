@@ -34,7 +34,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 {
 	if (!sharedCache) {
 		sharedCache = [[self alloc] init];
-		[sharedCache setStoragePath:[[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"ASIHTTPRequestCache"]];
+		[sharedCache setStoragePath:[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"ASIHTTPRequestCache"]];
 
 	}
 	return sharedCache;
@@ -66,7 +66,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	NSFileManager *fileManager = [[[NSFileManager alloc] init] autorelease];
 
 	BOOL isDirectory = NO;
-	NSArray *directories = [NSArray arrayWithObjects:path,[path stringByAppendingPathComponent:sessionCacheFolder],[path stringByAppendingPathComponent:permanentCacheFolder],nil];
+	NSArray *directories = @[path, [path stringByAppendingPathComponent:sessionCacheFolder], [path stringByAppendingPathComponent:permanentCacheFolder]];
 	for (NSString *directory in directories) {
 		BOOL exists = [fileManager fileExistsAtPath:directory isDirectory:&isDirectory];
 		if (exists && !isDirectory) {
@@ -87,12 +87,12 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 - (void)storeResponseForRequest:(ASIHTTPRequest *)request maxAge:(NSTimeInterval)maxAge
 {
 	[[self accessLock] lock];
-	
+
 	if ([request error] || ![request responseHeaders] || ([request responseStatusCode] != 200) || ([request cachePolicy] & ASIDoNotWriteToCacheCachePolicy)) {
 		[[self accessLock] unlock];
 		return;
 	}
-	
+
 	if ([self shouldRespectCacheControlHeaders] && ![[self class] serverAllowsResponseCachingForRequest:request]) {
 		[[self accessLock] unlock];
 		return;
@@ -100,19 +100,19 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 
 	NSString *headerPath = [self pathToStoreCachedResponseHeadersForRequest:request];
 	NSString *dataPath = [self pathToStoreCachedResponseDataForRequest:request];
-	
+
 	NSMutableDictionary *responseHeaders = [NSMutableDictionary dictionaryWithDictionary:[request responseHeaders]];
 	if ([request isResponseCompressed]) {
 		[responseHeaders removeObjectForKey:@"Content-Encoding"];
 	}
 	if (maxAge != 0) {
 		[responseHeaders removeObjectForKey:@"Expires"];
-		[responseHeaders setObject:[NSString stringWithFormat:@"max-age=%i",(int)maxAge] forKey:@"Cache-Control"];
+		responseHeaders[@"Cache-Control"] = [NSString stringWithFormat:@"max-age=%i", (int) maxAge];
 	}
 	// We use this special key to help expire the request when we get a max-age header
-	[responseHeaders setObject:[[[self class] rfc1123DateFormatter] stringFromDate:[NSDate date]] forKey:@"X-ASIHTTPRequest-Fetch-date"];
+	responseHeaders[@"X-ASIHTTPRequest-Fetch-date"] = [[[self class] rfc1123DateFormatter] stringFromDate:[NSDate date]];
 	[responseHeaders writeToFile:headerPath atomically:NO];
-	
+
 	if ([request responseData]) {
 		[[request responseData] writeToFile:dataPath atomically:NO];
 	} else if ([request downloadDestinationPath] && ![[request downloadDestinationPath] isEqualToString:dataPath]) {
@@ -147,7 +147,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		[[self accessLock] unlock];
 		return nil;
 	}
-	// Grab the file extension, if there is one. We do this so we can save the cached response with the same file extension - this is important if you want to display locally cached data in a web view 
+	// Grab the file extension, if there is one. We do this so we can save the cached response with the same file extension - this is important if you want to display locally cached data in a web view
 	NSString *extension = [[url path] pathExtension];
 	if (![extension length]) {
 		extension = @"html";
@@ -211,7 +211,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 
 	NSString *path = [[self storagePath] stringByAppendingPathComponent:([request cacheStoragePolicy] == ASICacheForSessionDurationCacheStoragePolicy ? sessionCacheFolder : permanentCacheFolder)];
 
-	// Grab the file extension, if there is one. We do this so we can save the cached response with the same file extension - this is important if you want to display locally cached data in a web view 
+	// Grab the file extension, if there is one. We do this so we can save the cached response with the same file extension - this is important if you want to display locally cached data in a web view
 	NSString *extension = [[[request url] path] pathExtension];
 	if (![extension length]) {
 		extension = @"html";
@@ -288,9 +288,9 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		}
 
 		// If the Etag or Last-Modified date are different from the one we have, we'll have to fetch this resource again
-		NSArray *headersToCompare = [NSArray arrayWithObjects:@"Etag",@"Last-Modified",nil];
+		NSArray *headersToCompare = @[@"Etag", @"Last-Modified"];
 		for (NSString *header in headersToCompare) {
-			if (![[[request responseHeaders] objectForKey:header] isEqualToString:[cachedHeaders objectForKey:header]]) {
+			if (![[request responseHeaders][header] isEqualToString:cachedHeaders[header]]) {
 				[[self accessLock] unlock];
 				return NO;
 			}
@@ -300,7 +300,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	if ([self shouldRespectCacheControlHeaders]) {
 
 		// Look for a max-age header
-		NSString *cacheControl = [[cachedHeaders objectForKey:@"Cache-Control"] lowercaseString];
+		NSString *cacheControl = [cachedHeaders[@"Cache-Control"] lowercaseString];
 		if (cacheControl) {
 			NSScanner *scanner = [NSScanner scannerWithString:cacheControl];
 			[scanner scanUpToString:@"max-age" intoString:NULL];
@@ -309,7 +309,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 				NSTimeInterval maxAge = 0;
 				[scanner scanDouble:&maxAge];
 
-				NSDate *fetchDate = [ASIHTTPRequest dateFromRFC1123String:[cachedHeaders objectForKey:@"X-ASIHTTPRequest-Fetch-date"]];
+				NSDate *fetchDate = [ASIHTTPRequest dateFromRFC1123String:cachedHeaders[@"X-ASIHTTPRequest-Fetch-date"]];
 				NSDate *expiryDate = [[[NSDate alloc] initWithTimeInterval:maxAge sinceDate:fetchDate] autorelease];
 
 				if ([expiryDate timeIntervalSinceNow] >= 0) {
@@ -323,7 +323,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		}
 
 		// Look for an Expires header to see if the content is out of date
-		NSString *expires = [cachedHeaders objectForKey:@"Expires"];
+		NSString *expires = cachedHeaders[@"Expires"];
 		if (expires) {
 			if ([[ASIHTTPRequest dateFromRFC1123String:expires] timeIntervalSinceNow] >= 0) {
 				[[self accessLock] unlock];
@@ -335,7 +335,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 		[[self accessLock] unlock];
 		return NO;
 	}
-	
+
 
 	[[self accessLock] unlock];
 	return YES;
@@ -356,7 +356,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	if (!cachePolicy) {
 		defaultCachePolicy = ASIAskServerIfModifiedWhenStaleCachePolicy;
 	}  else {
-		defaultCachePolicy = cachePolicy;	
+		defaultCachePolicy = cachePolicy;
 	}
 	[[self accessLock] unlock];
 }
@@ -382,7 +382,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	NSArray *cacheFiles = [fileManager contentsOfDirectoryAtPath:path error:&error];
 	if (error) {
 		[[self accessLock] unlock];
-		[NSException raise:@"FailedToTraverseCacheDirectory" format:@"Listing cache directory failed at path '%@'",path];	
+		[NSException raise:@"FailedToTraverseCacheDirectory" format:@"Listing cache directory failed at path '%@'",path];
 	}
 	for (NSString *file in cacheFiles) {
 		[fileManager removeItemAtPath:[path stringByAppendingPathComponent:file] error:&error];
@@ -396,13 +396,13 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 
 + (BOOL)serverAllowsResponseCachingForRequest:(ASIHTTPRequest *)request
 {
-	NSString *cacheControl = [[[request responseHeaders] objectForKey:@"Cache-Control"] lowercaseString];
+	NSString *cacheControl = [[request responseHeaders][@"Cache-Control"] lowercaseString];
 	if (cacheControl) {
 		if ([cacheControl isEqualToString:@"no-cache"] || [cacheControl isEqualToString:@"no-store"]) {
 			return NO;
 		}
 	}
-	NSString *pragma = [[[request responseHeaders] objectForKey:@"Pragma"] lowercaseString];
+	NSString *pragma = [[request responseHeaders][@"Pragma"] lowercaseString];
 	if (pragma) {
 		if ([pragma isEqualToString:@"no-cache"]) {
 			return NO;
@@ -422,19 +422,19 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	const char *cStr = [urlString UTF8String];
 	unsigned char result[16];
 	CC_MD5(cStr, (CC_LONG)strlen(cStr), result);
-	return [NSString stringWithFormat:@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],result[8], result[9], result[10], result[11],result[12], result[13], result[14], result[15]]; 	
+	return [NSString stringWithFormat:@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],result[8], result[9], result[10], result[11],result[12], result[13], result[14], result[15]];
 }
 
 + (NSDateFormatter *)rfc1123DateFormatter
 {
 	NSMutableDictionary *threadDict = [[NSThread currentThread] threadDictionary];
-	NSDateFormatter *dateFormatter = [threadDict objectForKey:@"ASIDownloadCacheDateFormatter"];
+	NSDateFormatter *dateFormatter = threadDict[@"ASIDownloadCacheDateFormatter"];
 	if (dateFormatter == nil) {
 		dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 		[dateFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"] autorelease]];
 		[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 		[dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss 'GMT'"];
-		[threadDict setObject:dateFormatter forKey:@"ASIDownloadCacheDateFormatter"];
+		threadDict[@"ASIDownloadCacheDateFormatter"] = dateFormatter;
 	}
 	return dateFormatter;
 }
